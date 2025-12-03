@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>UNITour & Travel - Raja Ampat 5D4N Student Open Trip</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="UNITour & Travel 5D4N student focused open trip to Raja Ampat. Modern package layout with clear overview, highlights, itinerary, inclusions, and WhatsApp booking for university groups." />
+  <meta name="description" content="UNITour & Travel 5D4N student focused open trip to Raja Ampat with clear overview, highlights, itinerary, inclusions, and WhatsApp booking for university groups." />
   <meta name="keywords" content="UNITour, Raja Ampat, open trip, student trip, university travel, Indonesia tour, island hopping" />
   <meta name="author" content="UNITour & Travel" />
 
@@ -308,10 +308,6 @@
       gap: 0.35rem;
     }
 
-    .hero-chip span {
-      display: block;
-    }
-
     .hero-bubble {
       position: absolute;
       right: -12px;
@@ -421,10 +417,6 @@
       border: 1px solid rgba(22, 163, 74, 0.2);
     }
 
-    .highlight-box strong {
-      color: #166534;
-    }
-
     .itinerary-day {
       margin-bottom: 0.6rem;
     }
@@ -489,13 +481,16 @@
       color: var(--muted);
     }
 
+    /* Responsive */
+
     @media (max-width: 960px) {
       .hero-grid {
         grid-template-columns: 1fr;
+        gap: 1.6rem;
       }
 
       .hero-card {
-        max-width: 420px;
+        max-width: 480px;
         margin-inline: auto;
       }
 
@@ -532,6 +527,16 @@
 
       .hero {
         padding: 2rem 0 2.2rem;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      /* supaya tidak numpuk di layar kecil */
+      .hero-bubble,
+      .hero-floating {
+        display: none;
       }
     }
   </style>
@@ -697,7 +702,7 @@
           </div>
         </section>
 
-        <!-- Travel period and booking period -->
+        <!-- Travel period -->
         <section class="section-block" id="travel-period">
           <div class="section-title-inline">Travel period and booking window</div>
 
@@ -716,7 +721,7 @@
           </ul>
         </section>
 
-        <!-- Travel info (flight & accommodation notes) -->
+        <!-- Travel info -->
         <section class="section-block" id="travel-info">
           <div class="section-title-inline">Travel info and route example</div>
           <p>
@@ -856,7 +861,7 @@
         </section>
       </div>
 
-      <!-- Right column: booking and extra info -->
+      <!-- Right column -->
       <aside>
         <div class="side-card" id="booking">
           <h3>Booking & student price request</h3>
@@ -914,7 +919,8 @@
     const WHATSAPP_NUMBER = "6282136305370";
 
     function openWhatsApp(message) {
-      const defaultMessage = "Hi UNITour, I am interested in the Raja Ampat 5D4N student open trip. Please send me the package details.";
+      const defaultMessage =
+        "Hi UNITour, I am interested in the Raja Ampat 5D4N student open trip. Please send me the package details.";
       const text = encodeURIComponent(message || defaultMessage);
       const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text;
       window.open(url, "_blank");
