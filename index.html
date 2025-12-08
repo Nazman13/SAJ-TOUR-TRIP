@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>UNITour & Travel - Raja Ampat 5D4N Student Open Trip</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
     :root {
@@ -21,25 +21,33 @@
       --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.08);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #e0f2fe 0, #f9fafb 45%, #f1f5f9 100%);
+      background: #f8fafc;
       color: #111827;
       line-height: 1.6;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    /* Top nav */
+    /* NAVBAR */
+
     header {
       position: sticky;
       top: 0;
       z-index: 50;
       background: rgba(248, 250, 252, 0.96);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
     }
 
     .nav-inner {
@@ -49,6 +57,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 10px 0;
+      gap: 12px;
     }
 
     .brand-area {
@@ -90,7 +99,7 @@
       display: flex;
       gap: 16px;
       font-size: 14px;
-      color: #475569;
+      color: #4b5563;
     }
 
     .nav-links a {
@@ -99,22 +108,25 @@
     }
 
     .nav-links a:hover {
-      background: rgba(148, 163, 184, 0.2);
+      background: rgba(148, 163, 184, 0.18);
     }
 
     .nav-cta {
       display: flex;
       gap: 10px;
       align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .btn-pill {
       border-radius: 999px;
       padding: 7px 18px;
       font-size: 14px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.9);
       background: white;
       cursor: pointer;
+      white-space: nowrap;
     }
 
     .btn-pill-primary {
@@ -125,236 +137,60 @@
       box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
     }
 
-    /* Hero */
+    /* HEADER GALLERY (seperti Citilink) */
 
-    .hero-wrap {
+    .header-gallery {
       width: min(1180px, 94%);
-      margin: 26px auto 32px;
+      margin: 22px auto 26px;
+    }
+
+    .gallery-images {
       display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
-      gap: 32px;
-      align-items: stretch;
-    }
-
-    .hero-left {
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), rgba(15, 118, 110, 0.04));
-      border-radius: 30px;
-      padding: 26px 28px 26px;
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-tagline {
-      display: inline-flex;
-      align-items: center;
+      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.2fr);
       gap: 10px;
-      background: rgba(240, 249, 255, 0.95);
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      color: #0369a1;
-      margin-bottom: 16px;
     }
 
-    .hero-tagline span.dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
+    .gallery-main img {
+      width: 100%;
+      border-radius: 18px;
+      object-fit: cover;
+      max-height: 260px;
     }
 
-    .hero-left h1 {
-      font-size: clamp(28px, 3.1vw, 34px);
-      line-height: 1.2;
-      margin-bottom: 10px;
-      color: #0f172a;
+    .gallery-thumbs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, minmax(0, 125px));
+      gap: 8px;
     }
 
-    .hero-left h1 span {
-      color: #0284c7;
-    }
-
-    .hero-sub {
-      font-size: 14px;
-      color: var(--muted);
-      max-width: 560px;
-      margin-bottom: 8px;
-    }
-
-    .hero-note-strong {
-      font-size: 14px;
-      font-weight: 600;
-      color: #047857;
-      margin-bottom: 18px;
-    }
-
-    .hero-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .chip {
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      background: rgba(255, 255, 255, 0.96);
-      font-size: 12px;
-      color: #0f172a;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .btn-main {
-      padding: 10px 22px;
-      border-radius: 999px;
-      border: none;
-      background: linear-gradient(to right, #059669, #22c55e);
-      color: white;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 14px 35px rgba(22, 163, 74, 0.45);
-    }
-
-    .btn-outline {
-      padding: 9px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.9);
-      background: rgba(255, 255, 255, 0.95);
-      font-size: 14px;
-      cursor: pointer;
-      color: #0f172a;
-    }
-
-    .hero-disclaimer {
-      margin-top: 6px;
-      font-size: 11px;
-      color: var(--muted);
-    }
-
-    .hero-right {
-      position: relative;
-    }
-
-    .hero-panel {
-      background: linear-gradient(135deg, #1f2937, #111827);
-      border-radius: 26px;
-      padding: 18px 18px 20px;
-      color: white;
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
+    .gallery-thumbs img {
+      width: 100%;
       height: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+      object-fit: cover;
+      border-radius: 12px;
     }
 
-    .hero-panel::before {
-      content: "";
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(34, 197, 94, 0.7), transparent 70%);
-      right: -120px;
-      bottom: -120px;
-      opacity: 0.8;
+    .gallery-text {
+      margin-top: 14px;
     }
 
-    .hero-panel h3 {
-      font-size: 15px;
+    .gallery-title {
+      font-size: clamp(20px, 2.4vw, 26px);
+      font-weight: 700;
       margin-bottom: 2px;
     }
 
-    .hero-panel p {
-      font-size: 12px;
-      color: rgba(226, 232, 240, 0.92);
+    .gallery-location {
+      font-size: 14px;
+      color: #6b7280;
     }
 
-    .hero-panel-main {
-      background: rgba(15, 23, 42, 0.9);
-      padding: 12px 12px 12px;
-      border-radius: 18px;
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-      margin-top: 4px;
-    }
-
-    .hero-thumb {
-      width: 82px;
-      height: 70px;
-      border-radius: 16px;
-      object-fit: cover;
-      flex-shrink: 0;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.7);
-      border: 2px solid rgba(56, 189, 248, 0.5);
-    }
-
-    .hero-panel-main h4 {
-      font-size: 13px;
-      margin-bottom: 4px;
-    }
-
-    .hero-panel-main p {
-      font-size: 11px;
-      margin-bottom: 0;
-    }
-
-    .hero-panel-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 10px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-panel-tags span {
-      font-size: 11px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.6);
-    }
-
-    .hero-panel-cta {
-      margin-top: 10px;
-      font-size: 11px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-panel-cta strong {
-      display: block;
-      margin-bottom: 3px;
-    }
-
-    .hero-panel-cta a {
-      display: inline-flex;
-      margin-top: 6px;
-      padding: 7px 16px;
-      border-radius: 999px;
-      background: #22c55e;
-      color: #022c22;
+    .gallery-location span {
       font-weight: 600;
-      font-size: 11px;
-      box-shadow: 0 10px 26px rgba(34, 197, 94, 0.6);
     }
 
-    /* Main layout below hero */
+    /* MAIN LAYOUT */
 
     .main-wrap {
       width: min(1180px, 94%);
@@ -366,11 +202,11 @@
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.98);
+      background: #ffffff;
       border-radius: var(--radius-md);
       padding: 18px 20px 20px;
       box-shadow: var(--shadow-card);
-      border: 1px solid rgba(148, 163, 184, 0.28);
+      border: 1px solid rgba(148, 163, 184, 0.25);
       margin-bottom: 16px;
     }
 
@@ -438,7 +274,9 @@
       font-size: 14px;
     }
 
-    li { margin-bottom: 4px; }
+    li {
+      margin-bottom: 4px;
+    }
 
     .booking-card {
       background: #0f172a;
@@ -501,24 +339,24 @@
       padding: 20px 0 28px;
     }
 
-    /* Responsive */
+    /* RESPONSIVE */
 
     @media (max-width: 900px) {
       .nav-inner {
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 6px;
       }
       .nav-links {
         display: none;
       }
-      .hero-wrap {
+      .gallery-images {
         grid-template-columns: minmax(0, 1fr);
       }
-      .hero-left {
-        order: 2;
+      .gallery-main img {
+        max-height: none;
       }
-      .hero-right {
-        order: 1;
+      .gallery-thumbs {
+        grid-template-rows: repeat(2, minmax(0, 90px));
       }
       .main-wrap {
         grid-template-columns: minmax(0, 1fr);
@@ -558,77 +396,34 @@
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero-wrap">
-  <div class="hero-left">
-    <div class="hero-tagline">
-      <span class="dot"></span>
-      <span>5D4N Raja Ampat Student Open Trip Jakarta - Raja Ampat - Jakarta*</span>
+<!-- HEADER GALLERY SEPERTI CITILINK -->
+<section class="header-gallery">
+  <div class="gallery-images">
+    <div class="gallery-main">
+      <!-- gambar utama header, pakai foto kamu sendiri -->
+      <img src="background.jpg" alt="Raja Ampat main view">
     </div>
-    <h1>Explore <span>Raja Ampat</span> with UNITour student open trip.</h1>
-    <p class="hero-sub">
-      A five day journey designed for university students who want a clear, structured, and affordable
-      way to enjoy island hopping, snorkeling, and local culture in Raja Ampat.
-    </p>
-    <p class="hero-note-strong">Smart Trip for Smart Students.</p>
-
-    <div class="hero-chips">
-      <span class="chip">Duration 5 days 4 nights</span>
-      <span class="chip">Destination Raja Ampat, Indonesia</span>
-      <span class="chip">Trip type Open trip student focus</span>
+    <div class="gallery-thumbs">
+      <!-- sementara pakai gambar yang sama, nanti bisa kamu ganti 4 foto berbeda -->
+      <img src="background.jpg" alt="Raja Ampat detail 1">
+      <img src="background.jpg" alt="Raja Ampat detail 2">
+      <img src="background.jpg" alt="Raja Ampat detail 3">
+      <img src="background.jpg" alt="Raja Ampat detail 4">
     </div>
-
-    <div class="hero-buttons">
-      <a class="btn-main" href="#booking">Join this trip</a>
-      <a class="btn-outline" href="#itinerary">View sample itinerary</a>
-    </div>
-
-    <p class="hero-disclaimer">
-      *Departure city is flexible. Jakarta is used here as an example. Route can be adjusted to your campus location.
-    </p>
   </div>
 
-  <div class="hero-right">
-    <aside class="hero-panel">
-      <h3>Quick package highlight</h3>
-      <p>
-        Perfect for campus groups, student organizations, and young graduates who want a transparent cost
-        structure and guided program in Raja Ampat.
-      </p>
-
-      <div class="hero-panel-main">
-        <img src="background.jpg" alt="Raja Ampat view" class="hero-thumb">
-        <div>
-          <h4>Share your group size and month.</h4>
-          <p>
-            We will send a student friendly price breakdown and travel recommendation directly to your WhatsApp.
-          </p>
-        </div>
-      </div>
-
-      <div class="hero-panel-tags">
-        <span>Piaynemo viewpoint</span>
-        <span>Sand bank photo session</span>
-        <span>Snorkeling at coral reef spots</span>
-        <span>Local village visit</span>
-      </div>
-
-      <div class="hero-panel-cta">
-        <strong>Ready for a campus trip plan?</strong>
-        <span>Send your basic idea and we help you shape the itinerary and budget steps.</span>
-        <br>
-        <a href="https://wa.me/6282136305370?text=Halo%20saya%20mau%20tanya%20paket%20Raja%20Ampat%20UNITour">
-          Chat UNITour on WhatsApp
-        </a>
-      </div>
-    </aside>
+  <div class="gallery-text">
+    <h1 class="gallery-title">5D4N Raja Ampat Student Open Trip (Jakarta – Raja Ampat – Jakarta)</h1>
+    <p class="gallery-location">
+      <span>Raja Ampat</span>, Indonesia
+    </p>
   </div>
 </section>
 
-<!-- MAIN CONTENT -->
+<!-- KONTEN UTAMA (SAMA DENGAN PUNYA KAMU SEBELUMNYA) -->
 <main class="main-wrap">
 
-  <!-- LEFT COLUMN -->
+  <!-- KOLUM KIRI -->
   <div>
 
     <section id="overview" class="card">
@@ -831,7 +626,7 @@
 
   </div>
 
-  <!-- RIGHT COLUMN -->
+  <!-- KOLUM KANAN -->
   <aside>
 
     <section id="booking" class="booking-card">
