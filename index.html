@@ -1,240 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>UNITour & Travel – Raja Ampat Student Trip</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>UNITour & Travel - Raja Ampat 5D4N Student Open Trip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --primary: #0f766e;
+      --primary-light: #14b8a6;
+      --accent: #0ea5e9;
+      --bg: #f9fafb;
+      --text: #111827;
+      --muted: #6b7280;
+      --white: #ffffff;
+      --radius-lg: 18px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
+      --shadow-card: 0 8px 25px rgba(15, 23, 42, 0.08);
+    }
 
-<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background:#f9fafb;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f3f6f8;
-  color: #222;
-}
+    /* HEADER DIPERBESAR */
+    header {
+      background-image: url('background.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 180px; /* sebelumnya kecil, sekarang besar */
+      position: relative;
+    }
 
-/* HEADER WITH BACKGROUND */
-header {
-  background-image: url('background.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 110px;
-  position: relative;
-}
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.25);
+      backdrop-filter: blur(1px);
+    }
 
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.18);
-  backdrop-filter: blur(1px);
-}
+    header * {
+      position: relative;
+      z-index: 2;
+    }
 
-header * {
-  position: relative;
-  z-index: 2;
-}
+    nav {
+      width: min(1150px, 94%);
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 12px;
+    }
 
-.navbar {
-  width: min(1200px, 94%);
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 12px;
-}
+    nav .brand {
+      font-weight:bold;
+      font-size:22px;
+      color:white;
+    }
 
-.brand {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  letter-spacing: .5px;
-}
+    nav .book-btn {
+      padding:10px 24px;
+      background:linear-gradient(to right, #0f766e,#14b8a6);
+      color:white;
+      font-weight:bold;
+      border-radius:8px;
+      text-decoration:none;
+    }
 
-.book-btn {
-  padding: 10px 22px;
-  background: #12c4a2;
-  color: white;
-  font-weight: bold;
-  border-radius: 6px;
-  text-decoration: none;
-}
+    /* HERO CONTENT */
+    .hero {
+      width:min(1150px,94%);
+      margin:auto;
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:22px;
+      padding:34px 0;
+    }
 
-/* HERO */
-.hero {
-  width: min(1200px, 94%);
-  margin: auto;
-  display: grid;
-  grid-template-columns: 2fr 1.2fr;
-  gap: 22px;
-  padding: 40px 0;
-}
+    .hero h1 {
+      font-size:38px;
+      margin-bottom:8px;
+      color:#064e44;
+    }
 
-.hero h1 {
-  font-size: 38px;
-  margin-bottom: 6px;
-  color: #064d44;
-}
+    .hero p {
+      font-size:15px;
+      line-height:1.4;
+      max-width:450px;
+    }
 
-.hero p {
-  font-size: 15.5px;
-  max-width: 480px;
-  line-height: 1.5;
-}
+    .join-btns a {
+      text-decoration:none;
+      padding:10px 22px;
+      border-radius:6px;
+      font-weight:bold;
+      font-size:14px;
+      margin-right:8px;
+    }
 
-.hero-tag {
-  margin-bottom: 12px;
-  color: #12c4a2;
-  font-weight: bold;
-  font-size: 14px;
-}
+    .join {
+      background:#0f766e;
+      color:white;
+    }
 
-.hero-btns {
-  margin-top: 20px;
-}
+    .view {
+      border:1px solid #0f766e;
+      color:#0f766e;
+    }
 
-.hero-btns a {
-  text-decoration: none;
-  padding: 10px 20px;
-  margin-right: 10px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 14px;
-}
+    /* BOX KANAN */
+    .quick-box {
+      background:linear-gradient(to bottom right, #3b3f46, #111318);
+      padding:18px;
+      border-radius:20px;
+      color:white;
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
 
-.btn-primary {
-  background: #12c4a2;
-  color:white;
-}
+    .quick-box img {
+      width:140px;
+      height:100px;
+      border-radius:14px;
+      object-fit:cover;
+    }
 
-.btn-outline {
-  border: 1px solid #12c4a2;
-  color: #12c4a2;
-}
+    .section {
+      width:min(1150px,94%);
+      margin:auto;
+      background:white;
+      padding:18px;
+      border-radius:14px;
+      margin-bottom:18px;
+      box-shadow:var(--shadow-card);
+    }
 
-/* RIGHT QUICK BOX */
-.quick-box {
-  background: linear-gradient(to bottom right, #3b3f46, #111318);
-  color: white;
-  padding: 18px;
-  border-radius: 20px;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
+    .section h2 {
+      color:#064e44;
+      margin-bottom:8px;
+    }
 
-.quick-box img {
-  width: 150px;
-  height: 110px;
-  border-radius: 14px;
-  object-fit: cover;
-}
-
-/* SECTIONS */
-.section {
-  width: min(1200px, 94%);
-  margin: auto;
-  background: white;
-  padding: 18px 20px;
-  border-radius: 14px;
-  margin-bottom: 18px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-}
-
-.section h2 {
-  color: #064d44;
-  margin-bottom: 10px;
-}
-
-/* LISTS */
-ul {
-  margin-left: 18px;
-}
-
-/* FOOTER */
-footer {
-  text-align:center;
-  padding: 22px 0;
-  font-size: 14px;
-  color: #888;
-}
-
-</style>
-
+    footer {
+      text-align:center;
+      padding:22px 0;
+      font-size:14px;
+      color:#6b7280;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <div class="navbar">
+  <nav>
     <div class="brand">UNITour & Travel</div>
-    <a href="https://wa.me/6282136305370?text=Hi%20saya%20mau%20info%20tour" class="book-btn">Book Now</a>
-  </div>
+    <a class="book-btn" href="https://wa.me/6282136305370?text=Halo%2C%20Saya%20mau%20info%20tour">
+      Book Now
+    </a>
+  </nav>
 </header>
 
 <section class="hero">
   <div>
-    <div class="hero-tag">Student Trip • 5 Days • Raja Ampat</div>
-    <h1>Explore Raja Ampat with Your Campus Group</h1>
-    <p>Experience Piaynemo, snorkeling spots, sandbank views, cultural visit, and guided schedules in a well-organized student package.</p>
+    <h1>Raja Ampat Student Trip 5D4N</h1>
+    <p>Cocok untuk rombongan kampus yang ingin menikmati Piaynemo, snorkel, village trip, dan itinerary rapi dalam satu paket hemat mahasiswa.</p>
 
-    <div class="hero-btns">
-      <a href="https://wa.me/6282136305370?text=Hi%20mau%20join%20tour" class="btn-primary">Join Trip</a>
-      <a href="#details" class="btn-outline">View Package</a>
+    <div class="join-btns">
+      <a href="https://wa.me/6282136305370?text=Hi%20saya%20mau%20ikut%20tour" class="join">Join Trip</a>
+      <a href="#package" class="view">View Package</a>
     </div>
   </div>
 
   <div class="quick-box">
     <img src="background.jpg" />
     <div>
-      <h3 style="margin:0 0 8px">Quick Highlight</h3>
-      <ul>
+      <h3 style="margin:0 0 6px;">Quick Highlight</h3>
+      <ul style="margin:0; padding-left:16px;">
         <li>Piaynemo viewpoint</li>
-        <li>Snorkeling & island hopping</li>
-        <li>Sandbank photo session</li>
+        <li>Snorkeling & reefs</li>
+        <li>Sandbank photoshoot</li>
       </ul>
     </div>
   </div>
 </section>
 
-<div class="section" id="details">
-  <h2>Package Details</h2>
+<div class="section" id="package">
+  <h2>What’s Included</h2>
   <ul>
-    <li>5 Days 4 Nights</li>
-    <li>Accommodation with shared rooms</li>
-    <li>Meals according to itinerary</li>
-    <li>Boat for group trip</li>
+    <li>Boat & island trips</li>
+    <li>Meals during program</li>
+    <li>Local guide</li>
+    <li>Shared lodging</li>
   </ul>
 </div>
 
 <div class="section">
-  <h2>What You Will See</h2>
+  <h2>Booking Format</h2>
   <ul>
-    <li>Piaynemo Lagoon Panorama</li>
-    <li>Coral ecosystem snorkeling</li>
-    <li>Traditional Papuan village</li>
-    <li>Sandbank scenery (Content spot)</li>
-  </ul>
-</div>
-
-<div class="section">
-  <h2>Booking Information</h2>
-  <p>Send format:</p>
-  <ul>
-    <li>Name & Campus</li>
-    <li>Total participants</li>
-    <li>Preferred month of departure</li>
+    <li>Nama dan Kampus</li>
+    <li>Jumlah peserta</li>
+    <li>Bulan keberangkatan</li>
   </ul>
 </div>
 
 <footer>
-  © <span id="year"></span> UNITour & Travel
+  © <span id="y"></span> UNITour & Travel
 </footer>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("y").textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
