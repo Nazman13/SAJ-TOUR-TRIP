@@ -1,975 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>UNITour & Travel - Raja Ampat 5D4N Student Open Trip</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="UNITour & Travel 5D4N student focused open trip to Raja Ampat with clear overview, highlights, itinerary, inclusions, and WhatsApp booking for university groups." />
-  <meta name="keywords" content="UNITour, Raja Ampat, open trip, student trip, university travel, Indonesia tour, island hopping" />
-  <meta name="author" content="UNITour & Travel" />
+<meta charset="UTF-8">
+<title>UNITour & Travel - Raja Ampat Package</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    :root {
-      --primary: #0f766e;
-      --primary-light: #14b8a6;
-      --accent: #0ea5e9;
-      --accent-soft: #e0f2fe;
-      --dark: #0f172a;
-      --bg: #f9fafb;
-      --text: #111827;
-      --muted: #6b7280;
-      --white: #ffffff;
-      --radius-lg: 18px;
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
-      --shadow-card: 0 8px 25px rgba(15, 23, 42, 0.08);
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #e0f2fe 0, #f9fafb 32%, #f1f5f9 100%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1120px, 100%);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      background: rgba(248, 250, 252, 0.95);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.4);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.7rem 0;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--dark);
-    }
-
-    .logo-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #ecfeff, #0f766e);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-size: 0.9rem;
-      box-shadow: var(--shadow-card);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.1rem;
-      font-size: 0.88rem;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      position: relative;
-      padding-bottom: 0.1rem;
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      border-radius: 999px;
-      background: linear-gradient(to right, var(--primary), var(--accent));
-      transition: width 0.16s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--dark);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-cta {
-      display: flex;
-      gap: 0.6rem;
-      align-items: center;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      border: none;
-      padding: 0.65rem 1.3rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(to right, var(--primary), var(--primary-light));
-      color: var(--white);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
-    }
-
-    .btn-outline {
-      border: 1px solid rgba(15, 23, 42, 0.12);
-      background: rgba(255, 255, 255, 0.9);
-      color: var(--dark);
-    }
-
-    .btn-outline:hover {
-      background: #e0f2fe;
-    }
-
-    .nav-toggle {
-      display: none;
-      border: none;
-      background: transparent;
-      cursor: pointer;
-    }
-
-    .nav-toggle span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      border-radius: 999px;
-      background: var(--dark);
-      margin: 4px 0;
-    }
-
-    /Hero/
+/* HERO SECTION */
 .hero {
-  padding: 2.8rem 0 3rem;
-  background-image: url('https://share.google/SnlrDyjHQFcbBsvmK');
+  height: 400px;
+  background-image: url('https://images.unsplash.com/photo-1609852433852-96f7abf7e7d2');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 0 0 24px 24px;
   position: relative;
-  color: white;
-  min-height: 380px;
 }
 
-/overlay gelap supaya teks terbaca/
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  border-radius: 0 0 24px 24px;
+  background: rgba(0,0,0,0.45);
 }
 
-/isi hero supaya di atas overlay/
-.hero-grid {
+.hero-content {
   position: relative;
-  z-index: 10;
+  color: white;
+  text-align: center;
+  padding-top: 150px;
+  font-size: 32px;
+  font-weight: bold;
 }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-      gap: 2.1rem;
-      align-items: center;
-    }
 
-    .hero-tag {
-      font-size: 0.8rem;
-      padding: 0.25rem 0.8rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.06);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-bottom: 0.8rem;
-      color: var(--primary);
-      border: 1px solid rgba(45, 212, 191, 0.4);
-    }
+.btn-wa {
+  background: #10b981;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 18px;
+}
 
-    .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #22c55e;
-    }
+/* SECTION STYLE */
+.section {
+  background: white;
+  margin: 18px;
+  padding: 20px;
+  border-radius: 8px;
+}
 
-    .hero-title {
-      font-size: clamp(1.9rem, 2.7vw, 2.5rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--dark);
-      margin-bottom: 0.35rem;
-    }
+/* HEADERS INSIDE SECTION */
+.section-title {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+</style>
 
-    .hero-title span {
-      color: var(--accent);
-    }
-
-    .hero-sub {
-      font-size: 0.96rem;
-      color: var(--muted);
-      margin-bottom: 0.45rem;
-      max-width: 34rem;
-    }
-
-    .hero-slogan {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: #0f766e;
-      margin-bottom: 1rem;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-      margin-bottom: 1.2rem;
-      font-size: 0.84rem;
-    }
-
-    .meta-pill {
-      padding: 0.25rem 0.8rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: var(--dark);
-      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at 0 0, #eff6ff, #0f172a);
-      border-radius: 24px;
-      padding: 1.3rem 1.2rem;
-      color: var(--white);
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-      min-height: 240px;
-    }
-
-    .hero-card-title {
-      font-size: 1.02rem;
-      font-weight: 600;
-      margin-bottom: 0.45rem;
-    }
-
-    .hero-card-sub {
-      font-size: 0.86rem;
-      color: #e5e7eb;
-      margin-bottom: 0.8rem;
-    }
-
-    .hero-card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.6rem;
-      font-size: 0.8rem;
-    }
-
-    .hero-chip {
-      padding: 0.28rem 0.65rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.55);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    .hero-bubble {
-      position: absolute;
-      right: -12px;
-      bottom: -12px;
-      width: 120px;
-      height: 120px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #22c55e, #0ea5e9);
-      opacity: 0.85;
-      filter: blur(2px);
-    }
-
-    .hero-floating {
-      position: absolute;
-      left: 1.1rem;
-      bottom: 1.1rem;
-      padding: 0.7rem 0.9rem;
-      border-radius: 16px;
-      background: rgba(15, 23, 42, 0.92);
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      font-size: 0.78rem;
-      max-width: 190px;
-      box-shadow: var(--shadow-card);
-      backdrop-filter: blur(14px);
-    }
-
-    .hero-floating strong {
-      display: block;
-      font-size: 0.82rem;
-      margin-bottom: 0.12rem;
-    }
-
-    main {
-      padding: 0 0 2.6rem;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr);
-      gap: 1.8rem;
-      align-items: flex-start;
-    }
-
-    .section-block {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 1.25rem 1.3rem;
-      margin-bottom: 1rem;
-      box-shadow: var(--shadow-card);
-      border: 1px solid rgba(148, 163, 184, 0.18);
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .section-title-inline {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 0.5rem;
-    }
-
-    .pill-label {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--primary);
-      margin-bottom: 0.25rem;
-      display: block;
-    }
-
-    .info-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    .info-table th,
-    .info-table td {
-      padding: 0.4rem 0.35rem;
-      border-bottom: 1px solid rgba(209, 213, 219, 0.85);
-      text-align: left;
-    }
-
-    .info-table th {
-      font-weight: 600;
-      color: var(--dark);
-      background: rgba(248, 250, 252, 0.96);
-    }
-
-    .bullet-list {
-      margin-left: 1.1rem;
-      margin-top: 0.25rem;
-    }
-
-    .bullet-list li {
-      margin-bottom: 0.25rem;
-    }
-
-    .highlight-box {
-      background: #ecfdf3;
-      border-radius: 14px;
-      padding: 0.7rem 0.8rem;
-      font-size: 0.86rem;
-      margin-top: 0.7rem;
-      color: #14532d;
-      border: 1px solid rgba(22, 163, 74, 0.2);
-    }
-
-    .itinerary-day {
-      margin-bottom: 0.6rem;
-    }
-
-    .itinerary-day strong {
-      color: var(--dark);
-    }
-
-    .side-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 1.15rem 1.2rem;
-      margin-bottom: 1rem;
-      box-shadow: var(--shadow-card);
-      border: 1px solid rgba(148, 163, 184, 0.24);
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .side-card h3 {
-      font-size: 1rem;
-      color: var(--dark);
-      margin-bottom: 0.4rem;
-    }
-
-    .price-tag {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 0.1rem;
-    }
-
-    .price-note {
-      font-size: 0.8rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.3rem;
-    }
-
-    .tag {
-      font-size: 0.78rem;
-      padding: 0.15rem 0.6rem;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--dark);
-    }
-
-    .contact-note {
-      font-size: 0.8rem;
-      margin-top: 0.55rem;
-    }
-
-    footer {
-      padding: 1.1rem 0 1.6rem;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    /* Responsive */
-
-    @media (max-width: 960px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 1.6rem;
-      }
-
-      .hero-card {
-        max-width: 480px;
-        margin-inline: auto;
-      }
-
-      .layout {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .nav-links {
-        position: absolute;
-        inset: 54px 1.5rem auto 1.5rem;
-        background: rgba(248, 250, 252, 0.98);
-        border-radius: 14px;
-        padding: 0.7rem 1rem;
-        flex-direction: column;
-        align-items: flex-start;
-        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
-        border: 1px solid rgba(148, 163, 184, 0.35);
-        display: none;
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-
-      .nav-cta {
-        display: none;
-      }
-
-      .nav-toggle {
-        display: block;
-      }
-
-      .hero {
-        padding: 2rem 0 2.2rem;
-      }
-
-      .hero-card {
-        min-height: auto;
-      }
-
-      /* supaya tidak numpuk di layar kecil */
-      .hero-bubble,
-      .hero-floating {
-        display: none;
-      }
-    }
-  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container nav">
-      <a href="#top" class="logo">
-        <div class="logo-icon">UT</div>
-        <span>UNITour & Travel</span>
-      </a>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#overview">Overview</a>
-        <a href="#highlights">Highlights</a>
-        <a href="#travel-period">Travel period</a>
-        <a href="#itinerary">Itinerary</a>
-        <a href="#price">Price & inclusions</a>
-        <a href="#terms">Terms & policies</a>
-        <a href="#booking">Booking</a>
-      </nav>
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    Explore Raja Ampat with UNITour
+    <br>
+    <a class="btn-wa" href="https://wa.me/6282136305370?text=Hi! Saya ingin detail paket tour">
+      Book via WhatsApp
+    </a>
+  </div>
+</section>
 
-      <div class="nav-cta">
-        <button class="btn btn-outline" onclick="scrollToSection('overview')">
-          View package
-        </button>
-        <button class="btn btn-primary" onclick="openWhatsApp()">
-          Book via WhatsApp
-        </button>
-      </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
+<!-- SECTION: OVERVIEW -->
+<div class="section">
+  <div class="section-title">Package Overview</div>
+  5D4N private student trip to Raja Ampat, including highlight spots such as Piaynemo Viewpoint, sandbank area, and snorkeling experience.
+</div>
 
-  <!-- Hero -->
-  <section class="hero" id="top">
-    <div class="container hero-grid">
-      <div>
-        <div class="hero-tag">
-          <span class="dot"></span>
-          5D4N Raja Ampat Student Open Trip  Jakarta - Raja Ampat - Jakarta*
-        </div>
-        <h1 class="hero-title">
-          Explore <span>Raja Ampat</span> with UNITour student open trip.
-        </h1>
-        <p class="hero-sub">
-          A five day journey designed for university students who want a clear, structured, and affordable way to enjoy island hopping, snorkeling, and local culture in Raja Ampat.
-        </p>
-        <p class="hero-slogan">
-          Smart Trip for Smart Students.
-        </p>
 
-        <div class="hero-meta">
-          <span class="meta-pill">Duration  5 days 4 nights</span>
-          <span class="meta-pill">Destination  Raja Ampat, Indonesia</span>
-          <span class="meta-pill">Trip type  Open trip  student focus</span>
-        </div>
+<!-- SECTION: HIGHLIGHTS -->
+<div class="section">
+  <div class="section-title">Trip Highlights</div>
+  <ul>
+    <li>Piaynemo Viewpoint</li>
+    <li>Island-hopping and snorkeling</li>
+    <li>Sandbank photoshoot</li>
+    <li>Local village visit</li>
+    <li>Documentation support for students</li>
+  </ul>
+</div>
 
-        <div class="hero-actions">
-          <button class="btn btn-primary" onclick="openWhatsApp('Hi UNITour, I want more details about the 5D4N Raja Ampat student open trip.')">
-            Join this trip
-          </button>
-          <button class="btn btn-outline" onclick="scrollToSection('itinerary')">
-            View sample itinerary
-          </button>
-        </div>
 
-        <p class="hero-note">
-          *Departure city is flexible. Jakarta is used here as an example. Route can be adjusted to your campus location.
-        </p>
-      </div>
+<!-- SECTION: ITINERARY -->
+<div class="section">
+  <div class="section-title">Itinerary Example</div>
 
-      <aside class="hero-card">
-        <div class="hero-card-title">Quick package highlight</div>
-        <p class="hero-card-sub">
-          Perfect for campus groups, student organizations, and young graduates who want to experience Raja Ampat with a transparent cost structure and guided program.
-        </p>
-        <div class="hero-card-grid">
-          <div>
-            <div class="hero-chip">
-              <span>Piaynemo viewpoint</span>
-            </div>
-            <div class="hero-chip" style="margin-top:0.3rem;">
-              <span>Sand bank photo session</span>
-            </div>
-          </div>
-          <div>
-            <div class="hero-chip">
-              <span>Snorkeling at coral reef spots</span>
-            </div>
-            <div class="hero-chip" style="margin-top:0.3rem;">
-              <span>Local village visit</span>
-            </div>
-          </div>
-        </div>
-        <div class="hero-bubble"></div>
-        <div class="hero-floating">
-          <strong>Share your group size and month.</strong>
-          We will send a student friendly price breakdown and travel recommendation directly to your WhatsApp.
-        </div>
-      </aside>
-    </div>
-  </section>
+  <strong>Day 1 – Arrival</strong><br>
+  Transfer to accommodation, welcome session, dinner and rest.<br><br>
 
-  <!-- Main content -->
-  <main class="container">
-    <div class="layout">
-      <!-- Left column -->
-      <div>
-        <!-- Overview -->
-        <section class="section-block" id="overview">
-          <div class="section-title-inline">Package overview</div>
-          <p>
-            UNITour Raja Ampat 5D4N Student Open Trip is built for university life. The package uses shared rooms, group boat arrangements, and a compact program so students can experience the best parts of Raja Ampat without planning everything from zero.
-          </p>
+  <strong>Day 2 – Piaynemo Viewpoint</strong><br>
+  Boat ride, trekking, lagoon exploration.<br><br>
 
-          <table class="info-table">
-            <tr>
-              <th>Package name</th>
-              <td>UNITour Raja Ampat 5D4N Student Open Trip</td>
-            </tr>
-            <tr>
-              <th>Trip type</th>
-              <td>Open trip for small to medium student groups</td>
-            </tr>
-            <tr>
-              <th>Recommended group size</th>
-              <td>8 - 16 participants per group</td>
-            </tr>
-            <tr>
-              <th>Main activities</th>
-              <td>Viewpoint hike, snorkeling, island hopping, village visit, content creation time</td>
-            </tr>
-            <tr>
-              <th>Organizer</th>
-              <td>UNITour & Travel - student oriented tour partner</td>
-            </tr>
-          </table>
+  <strong>Day 3 – Snorkeling</strong><br>
+  Multiple coral reef spots + sandbank photoshoot.<br><br>
 
-          <div class="highlight-box">
-            <strong>Presentation tip.</strong> Mention that the structure of this package helps students and lecturers see clearly what is included, what is not, and how the schedule flows day by day.
-          </div>
-        </section>
+  <strong>Day 4 – Village Visit</strong><br>
+  Free time for documentation and leisure.<br><br>
 
-        <!-- Highlights -->
-        <section class="section-block" id="highlights">
-          <div class="section-title-inline">Package highlights</div>
-          <ul class="bullet-list">
-            <li>Piaynemo viewpoint with iconic blue lagoon panorama.</li>
-            <li>Island hopping with curated snorkeling spots for students.</li>
-            <li>Sand bank session designed for group photos and content creation.</li>
-            <li>Local village visit to learn about daily life and culture.</li>
-            <li>Balanced schedule that mixes adventure, rest time, and flexible exploration blocks.</li>
-          </ul>
-          <div class="highlight-box" style="margin-top:0.7rem;">
-            This open trip is created for students who want meaningful nature experiences, not only a checklist of destinations.
-          </div>
-        </section>
+  <strong>Day 5 – Return</strong><br>
+  Final session, boat transfer and flight back.<br>
+</div>
 
-        <!-- Travel period -->
-        <section class="section-block" id="travel-period">
-          <div class="section-title-inline">Travel period and booking window</div>
 
-          <p><strong>Ideal travel period for Raja Ampat</strong></p>
-          <ul class="bullet-list">
-            <li>Good overall conditions: October to April.</li>
-            <li>Generally calmer waves: November to February.</li>
-            <li>Programs always depend on local weather and sea conditions.</li>
-          </ul>
+<!-- SECTION: PRICE & INCLUDE -->
+<div class="section">
+  <div class="section-title">Price & What’s Included</div>
 
-          <p style="margin-top:0.7rem;"><strong>Recommended booking period</strong></p>
-          <ul class="bullet-list">
-            <li>Book at least 30 - 60 days before departure for better flight options.</li>
-            <li>Earlier booking helps secure homestay and boat capacity for your group.</li>
-            <li>Campus groups can use the lead time to arrange savings, fundraising, or proposal submission.</li>
-          </ul>
-        </section>
+  <strong>Package includes:</strong>
+  <ul>
+    <li>4 Nights Accommodation</li>
+    <li>Meals during trip</li>
+    <li>Local guide & boat transport</li>
+    <li>Entrance fees</li>
+  </ul>
 
-        <!-- Travel info -->
-        <section class="section-block" id="travel-info">
-          <div class="section-title-inline">Travel info and route example</div>
-          <p>
-            Flight and route below are examples. UNITour & Travel will adjust departure cities and transit points according to your campus location and budget range.
-          </p>
+  <strong>Exclude:</strong>
+  <ul>
+    <li>Flight tickets</li>
+    <li>Personal expenses</li>
+    <li>Travel insurance</li>
+  </ul>
+</div>
 
-          <span class="pill-label">Sample route  Jakarta - Sorong - Raja Ampat - Sorong - Jakarta</span>
-          <table class="info-table">
-            <tr>
-              <th>Day</th>
-              <th>Route</th>
-              <th>Notes</th>
-            </tr>
-            <tr>
-              <td>Day 1</td>
-              <td>Jakarta - Sorong - Raja Ampat area</td>
-              <td>Morning or noon flight, followed by boat transfer to homestay</td>
-            </tr>
-            <tr>
-              <td>Day 5</td>
-              <td>Raja Ampat - Sorong - Jakarta</td>
-              <td>Return flight schedule based on airline availability</td>
-            </tr>
-          </table>
 
-          <p style="margin-top:0.6rem;"><strong>Flight and accommodation notes</strong></p>
-          <ul class="bullet-list">
-            <li>Flight options can start from different cities such as Jakarta, Surabaya, or Makassar.</li>
-            <li>Accommodation uses comfortable homestays or guesthouses with shared rooms for students.</li>
-            <li>Exact hotel or homestay name will be confirmed after booking is processed.</li>
-          </ul>
-        </section>
+<!-- SECTION: BOOKING -->
+<div class="section">
+  <div class="section-title">Booking Information</div>
+  To get updated price per participant, please contact:<br><br>
+  
+  <strong>WhatsApp:</strong> <a href="https://wa.me/6282136305370?text=Halo%20saya%20ingin%20info%20Raja%20Ampat" target="_blank">Klik di sini</a><br><br>
 
-        <!-- Itinerary -->
-        <section class="section-block" id="itinerary">
-          <div class="section-title-inline">Sample itinerary 5D4N</div>
+  Send format:<br>
+  - Name<br>
+  - Campus<br>
+  - Number of people joining<br>
+  - Target month<br>
+</div>
 
-          <div class="itinerary-day">
-            <strong>Day 1 - Arrival and welcome session</strong>
-            <p>
-              Arrival at Sorong, boat transfer to Raja Ampat, check in at local homestay, welcome briefing, and free time to explore the surrounding pier or beach. Evening is reserved for group introduction and rest.
-            </p>
-          </div>
+<br><br><br>
 
-          <div class="itinerary-day">
-            <strong>Day 2 - Piaynemo viewpoint and lagoon</strong>
-            <p>
-              Boat trip to Piaynemo, short hike to the viewpoint, panorama and photo session, lagoon exploration, and snorkeling in selected clear water spots. Return to homestay before sunset.
-            </p>
-          </div>
-
-          <div class="itinerary-day">
-            <strong>Day 3 - Snorkeling and sand bank experience</strong>
-            <p>
-              Full day dedicated to snorkeling at coral reef locations and enjoying a sand bank session for content ready group photos. Free time in the evening to rest or share experiences with the group.
-            </p>
-          </div>
-
-          <div class="itinerary-day">
-            <strong>Day 4 - Village visit and flexible time</strong>
-            <p>
-              Visit to a local village to see daily life and culture up close. The remaining time is flexible for light walks, additional photography, or relaxing around the homestay.
-            </p>
-          </div>
-
-          <div class="itinerary-day">
-            <strong>Day 5 - Check out and return flight</strong>
-            <p>
-              Check out from homestay, boat transfer back to Sorong, then flight to home city. Simple closing session and group photo before departure.
-            </p>
-          </div>
-
-          <p style="font-size:0.86rem; margin-top:0.4rem;">
-            Itinerary can be adjusted by the local team according to weather, safety considerations, and flight schedules, while keeping the main highlights of Raja Ampat.
-          </p>
-        </section>
-
-        <!-- Price & inclusions -->
-        <section class="section-block" id="price">
-          <div class="section-title-inline">Price & package inclusions</div>
-
-          <p><strong>Student price status</strong></p>
-          <p>
-            The package uses a price on request system. This allows your campus group to receive a quote that already matches your:
-          </p>
-          <ul class="bullet-list">
-            <li>Planned month of departure.</li>
-            <li>Number of participants joining the trip.</li>
-            <li>Preferred departure city.</li>
-          </ul>
-
-          <p style="margin-top:0.7rem;"><strong>Package inclusions</strong></p>
-          <ul class="bullet-list">
-            <li>Four nights accommodation in shared rooms suitable for students.</li>
-            <li>Daily breakfast, lunch, and dinner according to the final itinerary.</li>
-            <li>Boat and local transport for island hopping and village visit.</li>
-            <li>Entrance and conservation fees for scheduled destinations.</li>
-            <li>Local guide and UNITour & Travel trip leader during the trip.</li>
-            <li>Basic documentation support for group photos at key spots.</li>
-          </ul>
-
-          <p style="margin-top:0.7rem;"><strong>Package exclusions</strong></p>
-          <ul class="bullet-list">
-            <li>Return flight tickets between your city and Sorong.</li>
-            <li>Personal expenses such as snacks, extra drinks, and souvenirs.</li>
-            <li>Optional activities or trip extensions outside the main program.</li>
-            <li>Travel insurance, which can be added based on request.</li>
-          </ul>
-        </section>
-
-        <!-- Terms & policies -->
-        <section class="section-block" id="terms">
-          <div class="section-title-inline">Important notes, terms, and policies</div>
-
-          <p><strong>Important reminders</strong></p>
-          <ul class="bullet-list">
-            <li>Schedule may change depending on weather and sea conditions.</li>
-            <li>Participants are expected to follow safety instructions for all water activities.</li>
-            <li>Using life jackets during boat rides and snorkeling is strongly recommended.</li>
-            <li>Campus groups are encouraged to appoint a coordinator to communicate with UNITour.</li>
-          </ul>
-
-          <p style="margin-top:0.7rem;"><strong>General terms</strong></p>
-          <ul class="bullet-list">
-            <li>Trip dates and price depend on the availability of accommodation, boats, and flights at the time of booking.</li>
-            <li>A deposit is required to secure the group slot. Remaining payment will follow an agreed schedule.</li>
-            <li>Participant data and copies of ID or passport may be needed for ticketing and local registration.</li>
-            <li>Program can be adjusted if required by safety or operational considerations.</li>
-          </ul>
-
-          <p style="margin-top:0.7rem;"><strong>Refund and reschedule policy</strong></p>
-          <ul class="bullet-list">
-            <li>Refund and reschedule follow the policy of airlines and local operators involved in the trip.</li>
-            <li>Deposit is generally non refundable but can be transferred to another participant from the same group, subject to approval.</li>
-            <li>Reschedule requests will be handled based on seat, homestay, and boat availability.</li>
-          </ul>
-        </section>
-      </div>
-
-      <!-- Right column -->
-      <aside>
-        <div class="side-card" id="booking">
-          <h3>Booking & student price request</h3>
-          <p class="price-tag">Price on request</p>
-          <p class="price-note">
-            Final per student price depends on group size, travel month, and departure city. Send your basic plan to receive a clear and transparent breakdown.
-          </p>
-
-          <div>
-            <strong>Send this format via WhatsApp</strong>
-            <ul class="bullet-list" style="margin-top:0.3rem;">
-              <li>Name</li>
-              <li>Campus & faculty</li>
-              <li>Number of students joining</li>
-              <li>Target month of departure</li>
-              <li>Departure city</li>
-            </ul>
-          </div>
-
-          <button class="btn btn-primary" style="margin-top:0.8rem; width:100%;" onclick="openWhatsApp()">
-            Chat UNITour on WhatsApp
-          </button>
-
-          <p class="contact-note">
-            WhatsApp number: <strong>+62 821 3630 5370</strong><br />
-            Asking for information is free and does not force you to book.
-          </p>
-
-          <div class="tag-list">
-            <span class="tag">Campus trip</span>
-            <span class="tag">Graduation holiday</span>
-            <span class="tag">Organization retreat</span>
-          </div>
-        </div>
-
-        <div class="side-card">
-          <h3>Why it fits student life</h3>
-          <ul class="bullet-list">
-            <li>Sharing concept helps students split the cost clearly inside the group.</li>
-            <li>Schedule balances adventure, rest, and content making time.</li>
-            <li>UNITour can support simple documentation or letters if your campus needs formal approval.</li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      © <span id="year"></span> UNITour & Travel. Raja Ampat open trip for students and young travellers.
-    </div>
-  </footer>
-
-  <script>
-    const WHATSAPP_NUMBER = "6282136305370";
-
-    function openWhatsApp(message) {
-      const defaultMessage =
-        "Hi UNITour, I am interested in the Raja Ampat 5D4N student open trip. Please send me the package details.";
-      const text = encodeURIComponent(message || defaultMessage);
-      const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text;
-      window.open(url, "_blank");
-    }
-
-    function scrollToSection(id) {
-      const el = document.getElementById(id);
-      if (!el) return;
-      window.scrollTo({
-        top: el.offsetTop - 70,
-        behavior: "smooth"
-      });
-    }
-
-    const navToggle = document.getElementById("navToggle");
-    const navLinks = document.getElementById("navLinks");
-
-    navToggle.addEventListener("click", function () {
-      navLinks.classList.toggle("show");
-    });
-
-    navLinks.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("show");
-      });
-    });
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
