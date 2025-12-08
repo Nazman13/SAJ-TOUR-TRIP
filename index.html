@@ -137,38 +137,19 @@
       box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
     }
 
-    /* HEADER GALLERY (seperti Citilink) */
+    /* HEADER IMAGE FULL */
 
     .header-gallery {
       width: min(1180px, 94%);
       margin: 22px auto 26px;
     }
 
-    .gallery-images {
-      display: grid;
-      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.2fr);
-      gap: 10px;
-    }
-
-    .gallery-main img {
+    .header-hero-img {
       width: 100%;
-      border-radius: 18px;
+      max-height: 330px;
+      border-radius: 22px;
       object-fit: cover;
-      max-height: 260px;
-    }
-
-    .gallery-thumbs {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, minmax(0, 125px));
-      gap: 8px;
-    }
-
-    .gallery-thumbs img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 12px;
+      box-shadow: var(--shadow-soft);
     }
 
     .gallery-text {
@@ -332,6 +313,25 @@
       border: 1px solid rgba(148, 163, 184, 0.7);
     }
 
+    .scenario-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-size: 13px;
+    }
+
+    .scenario-table th,
+    .scenario-table td {
+      padding: 8px 6px;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: left;
+    }
+
+    .scenario-table th {
+      background: #f1f5f9;
+      font-weight: 600;
+    }
+
     footer {
       text-align: center;
       font-size: 12px;
@@ -349,14 +349,8 @@
       .nav-links {
         display: none;
       }
-      .gallery-images {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .gallery-main img {
+      .header-hero-img {
         max-height: none;
-      }
-      .gallery-thumbs {
-        grid-template-rows: repeat(2, minmax(0, 90px));
       }
       .main-wrap {
         grid-template-columns: minmax(0, 1fr);
@@ -396,21 +390,9 @@
   </div>
 </header>
 
-<!-- HEADER GALLERY SEPERTI CITILINK -->
+<!-- HEADER: SATU FOTO BESAR FULL -->
 <section class="header-gallery">
-  <div class="gallery-images">
-    <div class="gallery-main">
-      <!-- gambar utama header, pakai foto kamu sendiri -->
-      <img src="background.jpg" alt="Raja Ampat main view">
-    </div>
-    <div class="gallery-thumbs">
-      <!-- sementara pakai gambar yang sama, nanti bisa kamu ganti 4 foto berbeda -->
-      <img src="background.jpg" alt="Raja Ampat detail 1">
-      <img src="background.jpg" alt="Raja Ampat detail 2">
-      <img src="background.jpg" alt="Raja Ampat detail 3">
-      <img src="background.jpg" alt="Raja Ampat detail 4">
-    </div>
-  </div>
+  <img src="background.jpg" alt="Raja Ampat header view" class="header-hero-img">
 
   <div class="gallery-text">
     <h1 class="gallery-title">5D4N Raja Ampat Student Open Trip (Jakarta – Raja Ampat – Jakarta)</h1>
@@ -420,7 +402,7 @@
   </div>
 </section>
 
-<!-- KONTEN UTAMA (SAMA DENGAN PUNYA KAMU SEBELUMNYA) -->
+<!-- KONTEN UTAMA -->
 <main class="main-wrap">
 
   <!-- KOLUM KIRI -->
@@ -669,6 +651,43 @@
         <li>Schedule balances adventure, rest, and content making time.</li>
         <li>UNITour can support simple documentation or letters if your campus needs formal approval.</li>
       </ul>
+    </section>
+
+    <!-- SKENARIO PAKET ROMBONGAN -->
+    <section class="card">
+      <h2>Group package scenarios</h2>
+      <p class="muted">
+        These examples help lecturers and students imagine how the trip works for different group sizes. Final prices
+        follow the price on request system.
+      </p>
+
+      <table class="scenario-table">
+        <tr>
+          <th>Scenario</th>
+          <th>Group size</th>
+          <th>Suitable for</th>
+        </tr>
+        <tr>
+          <td>Compact trip</td>
+          <td>8 – 10 students</td>
+          <td>Small study group, project team, or organization core members who want quiet moments and easier coordination.</td>
+        </tr>
+        <tr>
+          <td>Standard campus group</td>
+          <td>12 – 16 students</td>
+          <td>Typical class group or organization division. Balanced atmosphere between togetherness, sharing costs, and flexibility.</td>
+        </tr>
+        <tr>
+          <td>Extended generation trip</td>
+          <td>18 – 24 students</td>
+          <td>Graduation trip or multi-class collaboration where students want bigger photo sessions and more content creation.</td>
+        </tr>
+      </table>
+
+      <p style="font-size:13px; margin-top:6px;">
+        You can mention these scenarios during presentation, then invite the audience to discuss which group size
+        fits their campus reality the most.
+      </p>
     </section>
 
   </aside>
