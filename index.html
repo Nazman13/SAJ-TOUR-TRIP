@@ -180,11 +180,10 @@
       margin: 4px 0;
     }
 
-    /* Hero */
-
-    .hero {
+    /Hero/
+.hero {
   padding: 2.8rem 0 3rem;
-  background-image: url('img/background.jpg');
+  background-image: url('background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -192,21 +191,22 @@
   position: relative;
   color: white;
   min-height: 380px;
-    }
-    }
-    .hero::before {
+}
+
+/overlay gelap supaya teks terbaca/
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   border-radius: 0 0 24px 24px;
 }
 
+/isi hero supaya di atas overlay/
 .hero-grid {
   position: relative;
   z-index: 10;
 }
-
     .hero-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
