@@ -1,942 +1,983 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UNITour & Travel | Tropical Indonesia Student Trips</title>
-  <meta name="description" content="UNITour & Travel provides student-friendly open trips to Raja Ampat and other tropical Indonesia destinations. Clear itinerary flow, transparent budget simulation, easy WhatsApp booking." />
-  <meta name="theme-color" content="#0b7a73" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAJ TRIP | Raja Ampat | Nusantara Wonderland</title>
+  <meta name="description" content="SAJ TRIP presents Raja Ampat student-friendly open trip with Nusantara Wonderland theme. Book via WhatsApp +62 821-3630-5370." />
 
   <style>
     :root{
-      --bg:#ecfbff;
+      --bg:#f6fbfb;
       --card:#ffffff;
-      --ink:#0b1b1a;
-      --muted:#5a6b6a;
-      --line:#e6eef0;
-      --brand:#0b7a73;
-      --brand2:#10a39a;
-      --accent:#ffd36e;
-      --shadow: 0 14px 40px rgba(10, 35, 35, .10);
+      --text:#0e1b1a;
+      --muted:#4d6766;
+      --line:rgba(14,27,26,.10);
+
+      --primary:#0aa39a;   /* tropical teal */
+      --primary2:#0b7fb8;  /* ocean blue */
+      --accent:#f4b23c;    /* warm gold */
+      --dark:#082423;
+
+      --shadow: 0 18px 50px rgba(10, 30, 30, .10);
+      --shadow2: 0 10px 24px rgba(10, 30, 30, .12);
+
       --radius: 18px;
       --radius2: 26px;
+
       --max: 1120px;
     }
 
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--text);
       background:
-        radial-gradient(1200px 500px at 10% 0%, rgba(16,163,154,.15), transparent 55%),
-        radial-gradient(900px 450px at 90% 10%, rgba(255,211,110,.16), transparent 55%),
-        linear-gradient(180deg, #f6feff 0%, var(--bg) 100%);
-      line-height:1.55;
+        radial-gradient(900px 420px at 10% -10%, rgba(10,163,154,.14), transparent 60%),
+        radial-gradient(900px 420px at 90% 5%, rgba(11,127,184,.14), transparent 55%),
+        radial-gradient(900px 520px at 50% 100%, rgba(244,178,60,.10), transparent 60%),
+        var(--bg);
     }
 
     a{color:inherit; text-decoration:none}
-    .container{max-width:var(--max); margin:0 auto; padding:0 16px}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 12px; border-radius:999px;
-      border:1px solid rgba(11,122,115,.18);
-      background: rgba(255,255,255,.72);
-      backdrop-filter: blur(8px);
-      font-size:12px; color:var(--muted);
-    }
-    .dot{width:8px;height:8px;border-radius:999px;background:var(--brand2)}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:12px 16px; border-radius:999px;
-      border:1px solid rgba(11,122,115,.22);
-      background:#fff;
-      font-weight:700;
-      cursor:pointer;
-      transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
-    }
-    .btn:hover{transform: translateY(-1px); box-shadow:0 10px 24px rgba(10,35,35,.10)}
-    .btn.primary{background: linear-gradient(90deg, var(--brand) 0%, var(--brand2) 100%); color:#fff; border-color: transparent;}
-    .btn.ghost{background: rgba(255,255,255,.72)}
-    .btn.small{padding:10px 14px; font-size:13px}
+    img{max-width:100%; display:block}
 
-    /* Top nav */
-    header{
-      position:sticky; top:0; z-index:99;
-      background: rgba(246, 254, 255, .78);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid rgba(230, 238, 240, .9);
-    }
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    /* NAV */
     .nav{
+      position:sticky; top:0; z-index:999;
+      background: rgba(255,255,255,.82);
+      backdrop-filter: blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
       display:flex; align-items:center; justify-content:space-between;
-      padding:12px 0;
-      gap:12px;
+      gap:14px; padding:12px 0;
     }
     .brand{
-      display:flex; align-items:center; gap:12px; min-width:210px;
+      display:flex; align-items:center; gap:12px;
+      min-width: 220px;
     }
     .logo{
       width:42px; height:42px; border-radius:14px;
+      background: radial-gradient(18px 18px at 30% 30%, rgba(255,255,255,.75), transparent 60%),
+                  linear-gradient(135deg, var(--primary), var(--primary2));
+      box-shadow: var(--shadow2);
       display:grid; place-items:center;
-      background: radial-gradient(circle at 30% 30%, #c9fff8, #86efe6 45%, #2cbdb2 78%, #0b7a73 100%);
-      box-shadow: 0 10px 20px rgba(11,122,115,.20);
-      color:#043b37; font-weight:900;
+      color:#fff; font-weight:800;
+      letter-spacing:.5px;
     }
-    .brand b{display:block; letter-spacing:.2px}
-    .brand small{display:block; color:var(--muted); font-weight:600}
-
+    .brand h1{font-size:14px; margin:0; line-height:1.1}
+    .brand p{margin:2px 0 0; font-size:12px; color:var(--muted)}
     .navlinks{
-      display:flex; gap:18px; align-items:center;
-      font-weight:700; color:#2a3a39;
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+      justify-content:center;
     }
-    .navlinks a{font-size:13px; color:#2a3a39; opacity:.92}
-    .navlinks a:hover{opacity:1; color:var(--brand)}
-    .navcta{display:flex; gap:10px; align-items:center}
-
-    .hamburger{display:none}
-    @media (max-width: 980px){
-      .navlinks{display:none}
-      .hamburger{display:inline-flex}
-      .brand{min-width:auto}
+    .navlinks a{
+      font-size:13px; color:var(--muted);
+      padding:8px 10px; border-radius:999px;
+    }
+    .navlinks a:hover{background:rgba(10,163,154,.10); color:var(--text)}
+    .nav-actions{
+      display:flex; align-items:center; gap:10px;
+      min-width: 220px;
+      justify-content:flex-end;
+    }
+    .btn{
+      border:1px solid var(--line);
+      background:#fff;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:13px;
+      cursor:pointer;
+      display:inline-flex; align-items:center; gap:10px;
+      box-shadow: 0 10px 26px rgba(10,30,30,.06);
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .btn-primary{
+      border:0;
+      background: linear-gradient(135deg, var(--primary), var(--primary2));
+      color:#fff;
+    }
+    .btn-primary:hover{filter: brightness(1.02)}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(10,163,154,.10);
+      border:1px solid rgba(10,163,154,.18);
+      color:var(--dark);
+      font-weight:700;
+      font-size:12px;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background:var(--accent);
+      box-shadow: 0 0 0 4px rgba(244,178,60,.18);
     }
 
-    /* Hero */
+    /* HERO */
     .hero{
-      padding:18px 0 8px;
+      padding:18px 0 26px;
     }
-    .heroWrap{
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .hero-media{
       position:relative;
       border-radius: var(--radius2);
       overflow:hidden;
+      min-height: 420px;
       box-shadow: var(--shadow);
-      border:1px solid rgba(255,255,255,.7);
-      background:#0b2d2a;
+      border: 1px solid rgba(255,255,255,.8);
+      background:#0b1f1e;
+      isolation:isolate;
     }
-
-    /* Change this image path or link */
-    .heroMedia{
-      height: 360px;
+    /* FULL HEADER IMAGE: pakai satu gambar besar, tidak dibagi-bagi */
+    .hero-media::before{
+      content:"";
+      position:absolute; inset:0;
       background:
-        linear-gradient(180deg, rgba(6,20,18,.20) 0%, rgba(6,20,18,.55) 65%, rgba(6,20,18,.65) 100%),
-        url("background.jpg");
+        linear-gradient(180deg, rgba(8,36,35,.18), rgba(8,36,35,.50)),
+        url("img/hero-raja-ampat.jpg");
       background-size: cover;
       background-position: center;
+      transform: scale(1.02);
+      z-index:0;
     }
-    @media (max-width: 640px){
-      .heroMedia{height: 330px;}
-    }
-
-    .heroContent{
+    .hero-media::after{
+      content:"";
       position:absolute; inset:0;
-      display:flex; flex-direction:column; justify-content:flex-end;
-      padding:22px;
-      color:#fff;
-    }
-    .heroTitle{
-      display:flex; flex-wrap:wrap; align-items:flex-end; gap:10px;
-      margin:10px 0 6px;
-    }
-    .heroTitle h1{
-      margin:0;
-      font-size: clamp(26px, 3.6vw, 42px);
-      letter-spacing:-.02em;
-      line-height:1.1;
-      text-shadow: 0 12px 28px rgba(0,0,0,.25);
-    }
-    .heroSub{
-      max-width: 760px;
-      margin:0 0 10px;
-      color: rgba(255,255,255,.92);
-      font-weight:600;
-    }
-    .heroMeta{
-      display:flex; flex-wrap:wrap; gap:10px; margin:10px 0 14px;
-    }
-    .chip{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.14);
-      border:1px solid rgba(255,255,255,.18);
-      backdrop-filter: blur(10px);
-      font-weight:700;
-      font-size:13px;
-    }
-    .heroActions{display:flex; flex-wrap:wrap; gap:10px; margin:10px 0 2px}
-
-    /* “Portal-like” section under hero, similar to travel sites */
-    .portal{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns: 1.35fr .65fr;
-      gap:14px;
-      align-items:start;
-    }
-    @media (max-width: 980px){ .portal{grid-template-columns:1fr; } }
-
-    .panel{
-      background: rgba(255,255,255,.82);
-      border:1px solid rgba(230,238,240,.9);
-      border-radius: var(--radius);
-      box-shadow: 0 14px 34px rgba(10,35,35,.07);
-      overflow:hidden;
-    }
-    .panelPad{padding:16px}
-    .panelHead{
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-      padding:14px 16px;
-      border-bottom: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(16,163,154,.10), rgba(255,255,255,.0));
-    }
-    .panelHead b{font-size:14px}
-    .panelHead small{color:var(--muted); font-weight:700}
-
-    /* Category strip like marketplace */
-    .cats{
-      display:flex; gap:10px; flex-wrap:wrap;
-    }
-    .cat{
-      padding:10px 12px;
-      border-radius: 999px;
-      background:#fff;
-      border:1px solid rgba(11,122,115,.14);
-      font-weight:800; font-size:13px;
-      color:#163130;
-    }
-    .cat.active{
-      background: rgba(11,122,115,.10);
-      border-color: rgba(11,122,115,.28);
-      color: var(--brand);
-    }
-
-    /* Cards grid */
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-      padding:16px;
-    }
-    @media (max-width: 980px){ .grid{grid-template-columns: repeat(2, 1fr);} }
-    @media (max-width: 560px){ .grid{grid-template-columns: 1fr;} }
-
-    .tripCard{
-      background:#fff;
-      border:1px solid rgba(230,238,240,.9);
-      border-radius: 16px;
-      overflow:hidden;
-      transition: transform .18s ease, box-shadow .2s ease;
-    }
-    .tripCard:hover{transform: translateY(-3px); box-shadow: 0 18px 40px rgba(10,35,35,.10)}
-    .thumb{
-      height: 140px;
-      background-size: cover;
-      background-position:center;
-    }
-    .tripBody{padding:12px}
-    .tripBody b{display:block; font-size:14px; margin-bottom:2px}
-    .tripBody small{color:var(--muted); font-weight:700}
-    .price{
-      margin-top:10px;
-      display:flex; align-items:center; justify-content:space-between; gap:10px;
-    }
-    .price span{
-      font-weight:900; color: var(--brand);
-    }
-
-    /* Main content layout */
-    main{padding:14px 0 38px}
-    .content{
-      display:grid;
-      grid-template-columns: 1.3fr .7fr;
-      gap:14px;
-      align-items:start;
-      margin-top:14px;
-    }
-    @media (max-width: 980px){ .content{grid-template-columns:1fr;} }
-
-    .section{
-      margin-top:14px;
-      padding:16px;
-      background: rgba(255,255,255,.82);
-      border:1px solid rgba(230,238,240,.9);
-      border-radius: var(--radius);
-      box-shadow: 0 14px 34px rgba(10,35,35,.07);
-    }
-    .section h2{margin:0 0 10px; font-size:18px}
-    .muted{color:var(--muted); font-weight:650}
-    .bullets{margin:10px 0 0; padding-left:18px}
-    .bullets li{margin:6px 0}
-
-    .tableWrap{overflow:auto; border-radius:14px; border:1px solid var(--line); background:#fff}
-    table{width:100%; border-collapse: collapse; min-width: 520px}
-    th,td{padding:12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top}
-    th{background: rgba(16,163,154,.08); font-size:13px}
-    td{font-weight:650; color:#1b2c2b}
-    tr:last-child td{border-bottom:none}
-
-    /* Right side booking card */
-    .sideCard{
-      position:sticky; top:86px;
-      padding:16px;
-      border-radius: var(--radius);
-      color:#fff;
       background:
-        radial-gradient(420px 220px at 20% 0%, rgba(255,211,110,.35), transparent 55%),
-        radial-gradient(520px 240px at 90% 20%, rgba(16,163,154,.38), transparent 55%),
-        linear-gradient(180deg, #0a1f1e 0%, #0b3431 100%);
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow: var(--shadow);
+        radial-gradient(600px 240px at 20% 20%, rgba(10,163,154,.30), transparent 60%),
+        radial-gradient(560px 260px at 75% 30%, rgba(11,127,184,.28), transparent 62%),
+        radial-gradient(560px 240px at 55% 90%, rgba(244,178,60,.22), transparent 62%);
+      z-index:0;
+      mix-blend-mode: screen;
+      opacity:.85;
     }
-    .sideCard h3{margin:0 0 10px; font-size:16px}
-    .tagPrice{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.12);
-      font-weight:900;
-      margin-bottom:10px;
+    .hero-content{
+      position:relative; z-index:1;
+      padding:26px 26px 24px;
+      display:flex; flex-direction:column; gap:12px;
+      height:100%;
+      justify-content:flex-end;
     }
-    .sideCard ul{margin:10px 0 12px; padding-left:18px; color: rgba(255,255,255,.88)}
-    .sideCard li{margin:6px 0}
-    .sideCard .hint{font-size:12px; color: rgba(255,255,255,.75); font-weight:650}
-    .sideBtns{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
-    .badgeRow{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .hero-title{
+      margin:0;
+      font-size:44px;
+      line-height:1.05;
+      letter-spacing:-.8px;
+      color:#fff;
+      text-shadow: 0 10px 30px rgba(0,0,0,.30);
+    }
+    .hero-sub{
+      margin:0;
+      max-width: 56ch;
+      color: rgba(255,255,255,.86);
+      font-size:14px;
+      line-height:1.6;
+    }
+    .hero-badges{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:8px;
+    }
     .badge{
-      display:inline-flex; align-items:center;
-      padding:8px 10px;
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      color:#fff;
       font-weight:800;
       font-size:12px;
-      color: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+    }
+    .badge small{opacity:.85; font-weight:700}
+    .hero-cta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .btn-hero{
+      border:0;
+      border-radius:999px;
+      padding:12px 16px;
+      font-weight:900;
+      cursor:pointer;
+      display:inline-flex; align-items:center; gap:10px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.20);
+    }
+    .btn-hero.primary{
+      background: linear-gradient(135deg, var(--primary), var(--primary2));
+      color:#fff;
+    }
+    .btn-hero.ghost{
+      background: rgba(255,255,255,.16);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.25);
+      backdrop-filter: blur(10px);
     }
 
-    /* Windows / accordion */
-    details{
-      background:#fff;
-      border:1px solid var(--line);
+    .hero-side{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .card{
+      background: rgba(255,255,255,.92);
+      border:1px solid rgba(255,255,255,.9);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card .pad{padding:18px}
+    .card h3{margin:0 0 8px; font-size:16px}
+    .card p{margin:0; color:var(--muted); font-size:13px; line-height:1.6}
+    .divider{height:1px; background:var(--line)}
+    .mini-list{margin:12px 0 0; padding:0; list-style:none; display:grid; gap:10px}
+    .mini-list li{
+      display:flex; align-items:flex-start; gap:10px;
+      font-size:13px; color:var(--text);
+    }
+    .check{
+      width:18px; height:18px; border-radius:8px;
+      background: rgba(10,163,154,.14);
+      border:1px solid rgba(10,163,154,.25);
+      display:grid; place-items:center;
+      flex:0 0 auto;
+    }
+    .check svg{width:12px; height:12px; fill:var(--primary)}
+
+    .price-box{
+      background:
+        radial-gradient(520px 220px at 20% 0%, rgba(10,163,154,.18), transparent 65%),
+        radial-gradient(520px 220px at 85% 15%, rgba(11,127,184,.16), transparent 62%),
+        #071c1b;
+      color:#fff;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .price-top{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
+    }
+    .price-tag{
+      display:inline-flex; flex-direction:column;
+      gap:6px;
+    }
+    .price-tag strong{font-size:24px; letter-spacing:-.2px}
+    .price-tag span{font-size:12px; opacity:.85}
+    .wa{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .wa a{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px;
+      border-radius: 999px;
+      font-weight:900;
+      background: linear-gradient(135deg, #23c483, #16a34a);
+      color:#fff;
+      border:0;
+      min-width: 210px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.25);
+    }
+    .wa small{
+      font-size:12px; opacity:.85;
+    }
+
+    /* SECTIONS */
+    section{padding:18px 0}
+    .section-head{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
+      margin: 6px 0 14px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size:22px;
+      letter-spacing:-.2px;
+    }
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      max-width: 56ch;
+      line-height:1.6;
+    }
+
+    /* Modern simple background blocks */
+    .panel{
+      background: rgba(255,255,255,.80);
+      border:1px solid rgba(255,255,255,.9);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .panel .pad{padding:18px}
+    .grid-2{display:grid; grid-template-columns: 1fr 1fr; gap:16px}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
+    .grid-4{display:grid; grid-template-columns: repeat(4, 1fr); gap:12px}
+
+    .feature{
+      background: rgba(255,255,255,.86);
+      border:1px solid rgba(14,27,26,.10);
       border-radius: 16px;
-      padding:12px 12px;
-      margin-top:10px;
+      padding:14px;
+      box-shadow: 0 10px 22px rgba(10,30,30,.06);
+    }
+    .feature h4{margin:0 0 6px; font-size:14px}
+    .feature p{margin:0; color:var(--muted); font-size:12.8px; line-height:1.55}
+
+    .gallery{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+    }
+    .g-main{
+      border-radius: var(--radius2);
+      overflow:hidden;
+      min-height: 320px;
+      box-shadow: var(--shadow);
+      position:relative;
+      background:#0b1f1e;
+      border:1px solid rgba(255,255,255,.8);
+    }
+    .g-main img{width:100%; height:100%; object-fit:cover}
+    .g-side{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .g-tile{
+      border-radius: 18px;
+      overflow:hidden;
+      min-height: 153px;
+      box-shadow: var(--shadow2);
+      border:1px solid rgba(255,255,255,.8);
+      background:#0b1f1e;
+    }
+    .g-tile img{width:100%; height:100%; object-fit:cover}
+
+    /* Accordion windows */
+    .accordion{display:grid; gap:12px}
+    details{
+      border:1px solid rgba(14,27,26,.10);
+      border-radius: 18px;
+      background: rgba(255,255,255,.88);
+      box-shadow: 0 10px 22px rgba(10,30,30,.06);
+      overflow:hidden;
     }
     summary{
       cursor:pointer;
+      padding:14px 16px;
       list-style:none;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
       font-weight:900;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
+      font-size:14px;
     }
     summary::-webkit-details-marker{display:none}
-    .caret{
-      width:34px; height:34px; border-radius:12px;
-      display:grid; place-items:center;
-      background: rgba(16,163,154,.10);
-      border:1px solid rgba(16,163,154,.20);
-      color: var(--brand);
-      font-weight:900;
+    .sum-right{
+      display:inline-flex; align-items:center; gap:10px;
+      color: var(--muted); font-weight:800; font-size:12px;
     }
-    details[open] .caret{transform: rotate(180deg)}
-    .winBody{padding:10px 4px 4px; color:#1e3130; font-weight:650}
+    details .content{
+      padding:0 16px 16px;
+      color: var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+    .table{
+      width:100%;
+      border-collapse: collapse;
+      overflow:hidden;
+      border-radius: 16px;
+      border:1px solid rgba(14,27,26,.10);
+      background: rgba(255,255,255,.85);
+    }
+    .table th, .table td{
+      padding:12px 12px;
+      border-bottom: 1px solid rgba(14,27,26,.08);
+      font-size:13px;
+      vertical-align:top;
+    }
+    .table th{background: rgba(10,163,154,.10); text-align:left}
+    .table tr:last-child td{border-bottom:0}
 
-    /* Scroll reveal */
-    .reveal{opacity:0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease}
-    .reveal.in{opacity:1; transform: translateY(0)}
-    @media (prefers-reduced-motion: reduce){
-      .reveal{opacity:1; transform:none; transition:none}
+    /* Sticky WhatsApp float */
+    .wa-float{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:1000;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      align-items:flex-end;
+    }
+    .wa-float a{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      font-weight:900;
+      color:#fff;
+      background: linear-gradient(135deg, #23c483, #16a34a);
+      box-shadow: 0 18px 40px rgba(0,0,0,.18);
+      border:1px solid rgba(255,255,255,.15);
+    }
+    .wa-float small{
+      background: rgba(255,255,255,.88);
+      border:1px solid rgba(14,27,26,.10);
+      padding:8px 10px;
+      border-radius: 14px;
+      color: var(--muted);
+      box-shadow: 0 10px 22px rgba(10,30,30,.08);
+    }
+
+    /* Scroll animation */
+    .reveal{
+      opacity:0;
+      transform: translateY(18px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.show{
+      opacity:1;
+      transform: translateY(0);
     }
 
     footer{
-      padding:22px 0 26px;
+      padding:26px 0 40px;
       color: var(--muted);
-      border-top: 1px solid rgba(230,238,240,.9);
-      background: rgba(246,254,255,.6);
+      font-size:13px;
     }
     .foot{
-      display:flex; align-items:flex-start; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      display:flex; align-items:flex-start; justify-content:space-between; gap:18px;
+      border-top:1px solid var(--line);
+      padding-top:18px;
     }
-    .foot small{font-weight:650}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .navlinks{display:none}
+      .hero-title{font-size:36px}
+      .gallery{grid-template-columns:1fr}
+      .g-side{grid-template-columns:1fr 1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+    }
+    @media (max-width: 520px){
+      .brand{min-width:auto}
+      .nav-actions{min-width:auto}
+      .hero-media{min-height: 460px}
+      .hero-title{font-size:32px}
+      .g-side{grid-template-columns:1fr}
+      .grid-4{grid-template-columns:1fr 1fr}
+    }
   </style>
 </head>
 
 <body>
-<header>
-  <div class="container">
-    <div class="nav">
-      <a class="brand" href="#top">
-        <div class="logo">UT</div>
-        <div>
-          <b>UNITour & Travel</b>
-          <small>Tropical Indonesia student trips</small>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="#top">
+          <div class="logo">SJ</div>
+          <div>
+            <h1>SAJ TRIP</h1>
+            <p>Nusantara Wonderland</p>
+          </div>
+        </a>
+
+        <nav class="navlinks" aria-label="Primary">
+          <a href="#overview">Overview</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#route">Route</a>
+          <a href="#itinerary">Itinerary</a>
+          <a href="#price">Price & Inclusions</a>
+          <a href="#terms">Terms</a>
+          <a href="#booking">Booking</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="btn" href="#price">View package</a>
+          <a class="btn btn-primary" href="https://wa.me/6282136305370" target="_blank" rel="noopener">Book via WhatsApp</a>
         </div>
-      </a>
-
-      <nav class="navlinks" aria-label="Primary">
-        <a href="#overview">Overview</a>
-        <a href="#popular">Popular trips</a>
-        <a href="#itinerary">Itinerary</a>
-        <a href="#price">Price & inclusions</a>
-        <a href="#terms">Terms</a>
-        <a href="#booking">Booking</a>
-      </nav>
-
-      <div class="navcta">
-        <a class="btn ghost small" href="#popular">View packages</a>
-        <a class="btn primary small" id="waTop" href="#" rel="noopener">Book via WhatsApp</a>
-        <button class="btn ghost small hamburger" type="button" id="menuBtn">Menu</button>
-      </div>
-    </div>
-
-    <div id="mobileMenu" style="display:none; padding:10px 0 14px;">
-      <div class="cats">
-        <a class="cat" href="#overview">Overview</a>
-        <a class="cat" href="#popular">Popular trips</a>
-        <a class="cat" href="#itinerary">Itinerary</a>
-        <a class="cat" href="#price">Price & inclusions</a>
-        <a class="cat" href="#terms">Terms</a>
-        <a class="cat active" href="#booking">Booking</a>
       </div>
     </div>
   </div>
-</header>
 
-<section class="hero" id="top">
-  <div class="container">
-    <div class="heroWrap reveal">
-      <div class="heroMedia" role="img" aria-label="Raja Ampat tropical collage header image"></div>
-      <div class="heroContent">
-        <span class="pill"><span class="dot"></span> 5D4N Student Open Trip • Raja Ampat • Indonesia</span>
+  <!-- HERO -->
+  <div id="top" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-media reveal">
+          <div class="hero-content">
+            <span class="pill"><span class="dot"></span> Raja Ampat Open Trip | 5D4N</span>
+            <h2 class="hero-title">Raja Ampat<br/>Nusantara Wonderland</h2>
+            <p class="hero-sub">
+              A tropical Indonesian journey curated for campus life and young travelers. Clear trip flow, simple budgeting, and iconic seascapes.
+            </p>
 
-        <div class="heroTitle">
-          <h1>Raja Ampat 5D4N Student Open Trip</h1>
+            <div class="hero-badges">
+              <span class="badge">Duration <small>5 Days 4 Nights</small></span>
+              <span class="badge">Group <small>8 to 24 pax</small></span>
+              <span class="badge">Focus <small>Island Hopping + Snorkeling</small></span>
+            </div>
+
+            <div class="hero-cta">
+              <a class="btn-hero primary" href="#booking">Start booking</a>
+              <a class="btn-hero ghost" href="#itinerary">See itinerary</a>
+            </div>
+          </div>
         </div>
 
-        <p class="heroSub">
-          A modern tropical Indonesia package designed for campus life: clear itinerary flow, shared-cost concept,
-          and a simple budget simulation so students can plan confidently.
+        <div class="hero-side">
+          <div class="card reveal" id="overview">
+            <div class="pad">
+              <h3>Trip overview</h3>
+              <p>
+                SAJ TRIP brings you a modern, student-friendly Raja Ampat program with a Nusantara Wonderland vibe.
+                We keep it structured so it is easy to present, coordinate, and budget.
+              </p>
+
+              <ul class="mini-list">
+                <li>
+                  <span class="check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.4-8.4 1.4 1.4z"/></svg>
+                  </span>
+                  Clear daily flow for groups and committees
+                </li>
+                <li>
+                  <span class="check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.4-8.4 1.4 1.4z"/></svg>
+                  </span>
+                  Tropical highlights: lagoons, reefs, sandbanks, village culture
+                </li>
+                <li>
+                  <span class="check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l1.4-1.4 2.9 2.9 8.4-8.4 1.4 1.4z"/></svg>
+                  </span>
+                  Budget simulation to help students prepare early
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card price-box reveal" id="booking">
+            <div class="pad">
+              <div class="price-top">
+                <div class="price-tag">
+                  <strong>Price on request</strong>
+                  <span>Final price depends on flight season, group size, and departure city.</span>
+                </div>
+              </div>
+
+              <div class="divider" style="margin:14px 0; background: rgba(255,255,255,.14)"></div>
+
+              <div style="font-weight:900; font-size:13px; opacity:.92">Send this format via WhatsApp:</div>
+              <div style="margin-top:10px; font-size:13px; line-height:1.7; opacity:.86">
+                Name<br/>
+                Campus / Organization<br/>
+                Number of participants<br/>
+                Target month of departure<br/>
+                Departure city
+              </div>
+
+              <div class="wa">
+                <a href="https://wa.me/6282136305370" target="_blank" rel="noopener">Chat SAJ TRIP on WhatsApp</a>
+                <small>WhatsApp: +62 821 3630 5370</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured / Nusantara blocks -->
+      <section class="reveal">
+        <div class="section-head">
+          <div>
+            <h2>Nusantara Wonderland Experience</h2>
+            <p>Modern and simple “windows” so your page looks clean and easy to read on phone and laptop.</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="pad grid-3">
+            <div class="feature">
+              <h4>Marine icons of Indonesia</h4>
+              <p>Blue lagoons, karst islands, and coral gardens that represent the tropical side of Nusantara.</p>
+            </div>
+            <div class="feature">
+              <h4>Student-friendly structure</h4>
+              <p>Easy to coordinate for committees, classes, student orgs, graduation trips, and retreats.</p>
+            </div>
+            <div class="feature">
+              <h4>Presentation-ready</h4>
+              <p>Clear sections like a tourism portal, so it looks professional for academic pitching.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section id="gallery" class="reveal">
+        <div class="section-head">
+          <div>
+            <h2>Gallery</h2>
+            <p>Replace images by uploading your own files into <b>img/</b> folder.</p>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <div class="g-main">
+            <img src="img/gallery-main.jpg" alt="Raja Ampat main view" />
+          </div>
+          <div class="g-side">
+            <div class="g-tile"><img src="img/gallery-1.jpg" alt="Island view" /></div>
+            <div class="g-tile"><img src="img/gallery-2.jpg" alt="Resort or village vibe" /></div>
+            <div class="g-tile"><img src="img/gallery-3.jpg" alt="Snorkeling scene" /></div>
+            <div class="g-tile"><img src="img/gallery-4.jpg" alt="Sunset tropical" /></div>
+          </div>
+        </div>
+
+        <p style="margin:10px 0 0; color:var(--muted); font-size:12.8px; line-height:1.6">
+          Tip: if images do not show, make sure the file names match exactly (uppercase and lowercase matter), for example <b>img/gallery-main.jpg</b>.
         </p>
+      </section>
 
-        <div class="heroMeta">
-          <span class="chip">Duration: 5 days 4 nights</span>
-          <span class="chip">Group: 8 to 24 students</span>
-          <span class="chip">Focus: island hopping + snorkeling</span>
-          <span class="chip">Departure: flexible</span>
-        </div>
-
-        <div class="heroActions">
-          <a class="btn primary" href="#itinerary">See itinerary</a>
-          <a class="btn" href="#booking">Get budget simulation</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Marketplace-like panel (similar spirit to travel portals) -->
-    <div class="portal">
-      <div class="panel reveal" id="overview">
-        <div class="panelHead">
+      <!-- ROUTE -->
+      <section id="route" class="reveal">
+        <div class="section-head">
           <div>
-            <b>Trip categories</b><br/>
-            <small>Choose a style that fits your campus plan</small>
+            <h2>Travel info and route example</h2>
+            <p>Shown as a clean window (accordion style) so it stays simple.</p>
           </div>
-          <span class="pill"><span class="dot"></span> Tropical Indonesia</span>
         </div>
 
-        <div class="panelPad">
-          <div class="cats" aria-label="Categories">
-            <span class="cat active">Open Trip</span>
-            <span class="cat">Private Trip</span>
-            <span class="cat">Campus Trip</span>
-            <span class="cat">Graduation Holiday</span>
-            <span class="cat">Organization Retreat</span>
+        <div class="panel">
+          <div class="pad">
+            <div class="accordion">
+              <details open>
+                <summary>
+                  Sample route (Jakarta departure)
+                  <span class="sum-right">Tap to close/open</span>
+                </summary>
+                <div class="content">
+                  <b>Jakarta → Sorong → Raja Ampat area → Sorong → Jakarta</b><br/>
+                  Route is flexible. SAJ TRIP can adjust to your campus location and budget range.
+                  Flight options may include transit depending on airline availability.
+                </div>
+              </details>
+
+              <details>
+                <summary>
+                  Flight and accommodation notes
+                  <span class="sum-right">Tap to open</span>
+                </summary>
+                <div class="content">
+                  Flight schedules depend on season and seat availability. Accommodation uses shared rooms
+                  (homestay or guesthouse) to keep it student-friendly. Final hotel name is confirmed during booking.
+                </div>
+              </details>
+            </div>
           </div>
-
-          <p class="muted" style="margin:12px 0 0;">
-            This page is structured like a travel portal so it looks professional for presentations and academic pitching.
-          </p>
         </div>
-      </div>
+      </section>
 
-      <div class="panel reveal" id="booking">
-        <div class="panelHead">
+      <!-- ITINERARY -->
+      <section id="itinerary" class="reveal">
+        <div class="section-head">
           <div>
-            <b>Quick booking</b><br/>
-            <small>WhatsApp response format included</small>
+            <h2>Sample itinerary 5D4N</h2>
+            <p>Editable itinerary format. You can replace activities later, but keep the structure clean.</p>
           </div>
         </div>
 
-        <div class="panelPad">
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <span class="pill"><span class="dot"></span> WhatsApp: +62 821 3630 5370</span>
-            <span class="pill"><span class="dot"></span> Price: on request</span>
+        <div class="panel">
+          <div class="pad">
+            <div class="accordion">
+              <details open>
+                <summary>Day 1: Arrival and welcome session <span class="sum-right">5D4N</span></summary>
+                <div class="content">
+                  Arrive in Sorong, transfer to Raja Ampat area (by boat based on schedule).
+                  Check in, briefing, and free time. Evening: group introduction and rest.
+                </div>
+              </details>
+              <details>
+                <summary>Day 2: Lagoon viewpoint + snorkeling blocks <span class="sum-right">Highlights</span></summary>
+                <div class="content">
+                  Viewpoint hike (photo session), curated snorkeling spots with guide coordination,
+                  and island hopping blocks designed for safe pacing.
+                </div>
+              </details>
+              <details>
+                <summary>Day 3: Sandbank moment + village culture <span class="sum-right">Nusantara</span></summary>
+                <div class="content">
+                  Sandbank session for content creation, then local village visit for cultural learning and respectful tourism.
+                </div>
+              </details>
+              <details>
+                <summary>Day 4: Free exploration and group program <span class="sum-right">Flexible</span></summary>
+                <div class="content">
+                  Flexible day for additional snorkeling, beach time, or campus-style group program.
+                  Optional documentation and committee coordination.
+                </div>
+              </details>
+              <details>
+                <summary>Day 5: Check-out and return <span class="sum-right">Return</span></summary>
+                <div class="content">
+                  Check out, transfer to Sorong, then flight back to departure city.
+                </div>
+              </details>
+            </div>
           </div>
-
-          <p class="muted" style="margin:10px 0 8px;">Send this format via WhatsApp:</p>
-          <ul class="bullets" style="margin-top:6px;">
-            <li>Name + campus/faculty</li>
-            <li>Group size (8–10 / 12–16 / 18–24)</li>
-            <li>Target month of departure</li>
-            <li>Departure city</li>
-            <li>Special request (snorkeling focus, content creation, documentation letter)</li>
-          </ul>
-
-          <div style="margin-top:12px;">
-            <a class="btn primary" id="waSide" href="#" rel="noopener">Chat UNITour on WhatsApp</a>
-          </div>
-
-          <p class="hint" style="margin:10px 0 0;">
-            Asking for information is free and does not force you to book.
-          </p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
-<main>
-  <div class="container">
-
-    <!-- Popular trips grid -->
-    <section class="panel reveal" id="popular" aria-label="Popular packages">
-      <div class="panelHead">
-        <div>
-          <b>Popular tropical packages</b><br/>
-          <small>Simple grid like a trip marketplace</small>
+      <!-- PRICE & INCLUSIONS -->
+      <section id="price" class="reveal">
+        <div class="section-head">
+          <div>
+            <h2>Price and inclusions</h2>
+            <p>Split into simple windows: inclusions, exclusions, group scenarios, and budget simulation.</p>
+          </div>
         </div>
-        <a class="btn ghost small" href="#price">See inclusions</a>
-      </div>
 
-      <div class="grid">
-        <article class="tripCard">
-          <div class="thumb" style="background-image:url('background.jpg');"></div>
-          <div class="tripBody">
-            <b>Raja Ampat 5D4N Student Open Trip</b>
-            <small>Island hopping + snorkeling • West Papua</small>
-            <div class="price">
-              <span>Price on request</span>
-              <a class="btn small" href="#itinerary">Details</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="tripCard">
-          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=1200&q=70');"></div>
-          <div class="tripBody">
-            <b>Labuan Bajo Komodo Sea Day</b>
-            <small>Boat day trip • photo spots</small>
-            <div class="price">
-              <span>On request</span>
-              <a class="btn small" href="#booking">Inquiry</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="tripCard">
-          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1537956965359-7573183d1f57?auto=format&fit=crop&w=1200&q=70');"></div>
-          <div class="tripBody">
-            <b>Bromo Sunrise Study Trip</b>
-            <small>Short trip • campus-friendly</small>
-            <div class="price">
-              <span>On request</span>
-              <a class="btn small" href="#booking">Inquiry</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Main detail layout -->
-    <div class="content">
-      <div>
-        <section class="section reveal" aria-label="Package overview">
-          <h2>Package overview</h2>
-          <p class="muted">
-            UNITour Raja Ampat 5D4N Student Open Trip is built for university life. The package uses shared rooms,
-            group boat arrangements, and a compact program so students can experience Raja Ampat without planning from zero.
-          </p>
-
-          <div class="tableWrap" style="margin-top:12px;">
-            <table>
-              <tr>
-                <th>Package name</th>
-                <td>UNITour Raja Ampat 5D4N Student Open Trip</td>
-              </tr>
-              <tr>
-                <th>Trip type</th>
-                <td>Open trip for student groups</td>
-              </tr>
-              <tr>
-                <th>Recommended group size</th>
-                <td>8–16 participants per group (also available up to 24)</td>
-              </tr>
-              <tr>
-                <th>Main activities</th>
-                <td>Viewpoint hike, snorkeling, island hopping, village visit, content creation time</td>
-              </tr>
-              <tr>
-                <th>Organizer</th>
-                <td>UNITour & Travel</td>
-              </tr>
-            </table>
-          </div>
-        </section>
-
-        <section class="section reveal" aria-label="Why it fits student life">
-          <h2>Why it fits student life</h2>
-          <ul class="bullets">
-            <li>Sharing concept helps students split the cost clearly inside the group.</li>
-            <li>Schedule balances adventure, rest, and content making time.</li>
-            <li>UNITour can support simple documentation or letters if your campus needs formal approval.</li>
-          </ul>
-        </section>
-
-        <section class="section reveal" aria-label="Group package scenarios">
-          <h2>Group package scenarios</h2>
-          <p class="muted">
-            These examples help students imagine how the trip works for different group sizes. Final offers may adjust by flight season and availability.
-          </p>
-
-          <div class="tableWrap" style="margin-top:12px;">
-            <table>
-              <tr>
-                <th>Scenario</th>
-                <th>Group size</th>
-                <th>Estimated cost range*</th>
-                <th>Suitable for</th>
-              </tr>
-              <tr>
-                <td>Compact trip</td>
-                <td>8–10 students</td>
-                <td>IDR 6,350,000 – 6,950,000 / pax</td>
-                <td>Small study group, project team, or organization core members who prefer easier coordination.</td>
-              </tr>
-              <tr>
-                <td>Standard campus group</td>
-                <td>12–16 students</td>
-                <td>IDR 5,750,000 – 6,350,000 / pax</td>
-                <td>Typical class group or organization division. Balanced structure, fair cost split, and flexibility.</td>
-              </tr>
-              <tr>
-                <td>Extended generation trip</td>
-                <td>18–24 students</td>
-                <td>IDR 5,350,000 – 5,950,000 / pax</td>
-                <td>Graduation trip or multi-class collaboration with bigger photo sessions and shared celebration moments.</td>
-              </tr>
-            </table>
-          </div>
-
-          <p class="muted" style="font-size:12px; margin:10px 0 0;">
-            *Estimated cost excludes airfare and may vary depending on seasonality, availability, and departure city.
-          </p>
-        </section>
-
-        <!-- Windows style sections (simple, modern) -->
-        <section class="section reveal" id="itinerary" aria-label="Itinerary and route">
-          <h2>Travel info, route example, and itinerary</h2>
-          <p class="muted">Open each window to keep the page clean and presentation-friendly.</p>
-
-          <details open>
-            <summary>
-              Travel info and route example
-              <span class="caret">⌄</span>
-            </summary>
-            <div class="winBody">
-              <p><b>Route example:</b> Jakarta → Sorong → Raja Ampat area → Sorong → Jakarta</p>
-              <ul class="bullets">
-                <li>Departure city is flexible. Jakarta is only an example.</li>
-                <li>Transit points may change based on airline schedule and group budget.</li>
-                <li>Boat schedule follows sea conditions and local port policy.</li>
-              </ul>
-            </div>
-          </details>
-
-          <details>
-            <summary>
-              Sample itinerary 5D4N (student flow)
-              <span class="caret">⌄</span>
-            </summary>
-            <div class="winBody">
-              <ul class="bullets">
-                <li><b>Day 1:</b> Arrival, transfer, briefing, rest, short sunset spot.</li>
-                <li><b>Day 2:</b> Island hopping + snorkeling blocks, content creation time.</li>
-                <li><b>Day 3:</b> Viewpoint hike early morning, sand bank session, village visit.</li>
-                <li><b>Day 4:</b> Flexible day: extra snorkeling, drone photo session, or calm exploration.</li>
-                <li><b>Day 5:</b> Check-out, transfer, departure.</li>
-              </ul>
-              <p class="muted" style="margin-top:8px;">We keep the schedule in clear blocks so it feels structured for campus presentations.</p>
-            </div>
-          </details>
-
-          <details id="price">
-            <summary>
-              Price and inclusions (what you get)
-              <span class="caret">⌄</span>
-            </summary>
-            <div class="winBody">
-              <div class="tableWrap">
-                <table>
-                  <tr>
-                    <th>Included</th>
-                    <th>Notes</th>
-                  </tr>
-                  <tr>
-                    <td>Accommodation (shared rooms)</td>
-                    <td>Student-friendly sharing concept to reduce cost.</td>
-                  </tr>
-                  <tr>
-                    <td>Boat arrangement for main spots</td>
-                    <td>Depends on sea condition and group size.</td>
-                  </tr>
-                  <tr>
-                    <td>Local coordinator</td>
-                    <td>Helps time blocks, safety flow, and group coordination.</td>
-                  </tr>
-                  <tr>
-                    <td>Entrance fees (selected spots)</td>
-                    <td>Final list confirmed during quotation stage.</td>
-                  </tr>
-                  <tr>
-                    <td>Documentation guidance</td>
-                    <td>Simple support for campus trip reports or letters.</td>
-                  </tr>
-                </table>
-              </div>
-
-              <p class="muted" style="margin-top:10px;">
-                <b>Not included:</b> airfare, personal meals outside plan, personal gear, and optional upgrades.
-              </p>
-            </div>
-          </details>
-
-          <details id="terms">
-            <summary>
-              Terms and policies (simple)
-              <span class="caret">⌄</span>
-            </summary>
-            <div class="winBody">
-              <ul class="bullets">
-                <li>Trip schedule can change due to weather and sea conditions for safety.</li>
-                <li>Booking is confirmed after payment steps agreed via WhatsApp.</li>
-                <li>Name list and basic participant data are required for coordination.</li>
-                <li>Cancellation and reschedule follow the agreement in your quotation chat.</li>
-                <li>Students must follow local rules, safety briefing, and guide instructions.</li>
-              </ul>
-              <p class="muted" style="margin-top:8px;">
-                This section is written to be easy to present and understand, not legal-heavy.
-              </p>
-            </div>
-          </details>
-        </section>
-
-        <section class="section reveal" aria-label="Budget simulation">
-          <h2>Budget simulation per person</h2>
-          <p class="muted">
-            This is a simulation so students can estimate how much money to prepare. Airfare and extra meals are adjustable.
-          </p>
-
-          <div class="tableWrap" style="margin-top:12px;">
-            <table>
-              <tr>
-                <th>Group size</th>
-                <th>Trip cost (land/boat/etc.)</th>
-                <th>Estimated airfare</th>
-                <th>Meals & extras</th>
-                <th>Total per person</th>
-              </tr>
-              <tr>
-                <td>8–10</td>
-                <td id="t1">IDR 6,650,000</td>
-                <td id="a1">IDR 2,000,000</td>
-                <td id="m1">IDR 900,000</td>
-                <td id="s1"><b>IDR 9,550,000</b></td>
-              </tr>
-              <tr>
-                <td>12–16</td>
-                <td id="t2">IDR 6,050,000</td>
-                <td id="a2">IDR 2,000,000</td>
-                <td id="m2">IDR 900,000</td>
-                <td id="s2"><b>IDR 8,950,000</b></td>
-              </tr>
-              <tr>
-                <td>18–24</td>
-                <td id="t3">IDR 5,650,000</td>
-                <td id="a3">IDR 2,000,000</td>
-                <td id="m3">IDR 900,000</td>
-                <td id="s3"><b>IDR 8,550,000</b></td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="panel" style="margin-top:12px;">
-            <div class="panelHead">
-              <div>
-                <b>Adjust the simulation</b><br/>
-                <small>For presentation and planning</small>
-              </div>
-              <span class="pill"><span class="dot"></span> Live calculator</span>
-            </div>
-
-            <div class="panelPad" style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
-              <div>
-                <label class="muted" for="airfare">Airfare per person (IDR)</label><br/>
-                <input id="airfare" type="number" value="2000000" min="0" style="width:100%; padding:12px; border-radius:14px; border:1px solid var(--line); margin-top:6px; font-weight:800;" />
-              </div>
-              <div>
-                <label class="muted" for="meals">Meals & extras (IDR)</label><br/>
-                <input id="meals" type="number" value="900000" min="0" style="width:100%; padding:12px; border-radius:14px; border:1px solid var(--line); margin-top:6px; font-weight:800;" />
-              </div>
-              <div>
-                <label class="muted" for="scenarioPick">Scenario</label><br/>
-                <select id="scenarioPick" style="width:100%; padding:12px; border-radius:14px; border:1px solid var(--line); margin-top:6px; font-weight:900;">
-                  <option value="1">8–10 students</option>
-                  <option value="2" selected>12–16 students</option>
-                  <option value="3">18–24 students</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="panelPad" style="padding-top:0;">
-              <div class="pill" style="font-weight:900;">
-                Estimated total per person: <span id="totalLive" style="color:var(--brand); font-weight:900;"></span>
-              </div>
-              <p class="muted" style="margin:10px 0 0; font-size:12px;">
-                Note: This is only a planning tool. Final quotation follows availability and season.
+        <div class="grid-2">
+          <div class="panel">
+            <div class="pad">
+              <h3 style="margin:0 0 10px">Package includes</h3>
+              <table class="table" aria-label="Inclusions">
+                <tr><th>Included</th><th>Notes</th></tr>
+                <tr><td>Accommodation (shared)</td><td>Student-friendly room sharing</td></tr>
+                <tr><td>Boat transfers (program)</td><td>Based on itinerary and sea conditions</td></tr>
+                <tr><td>Local guide coordination</td><td>For snorkeling and island hopping pacing</td></tr>
+                <tr><td>Program documentation support</td><td>Optional for campus needs (simple)</td></tr>
+              </table>
+              <p style="margin:10px 0 0; color:var(--muted); font-size:12.8px; line-height:1.6">
+                Final inclusions can change based on the group request and month.
               </p>
             </div>
           </div>
-        </section>
-      </div>
 
-      <aside>
-        <div class="sideCard reveal" aria-label="Booking card">
-          <h3>Booking and price request</h3>
-          <div class="tagPrice">Price on request</div>
-
-          <div class="hint">Send your group plan to receive a clear and transparent breakdown:</div>
-          <ul>
-            <li>Name + campus</li>
-            <li>Group size and month</li>
-            <li>Departure city</li>
-            <li>Trip style: chill or active</li>
-          </ul>
-
-          <div class="sideBtns">
-            <a class="btn primary" id="waSticky" href="#" rel="noopener">Book via WhatsApp</a>
-            <a class="btn" href="#itinerary">See itinerary</a>
+          <div class="panel">
+            <div class="pad">
+              <h3 style="margin:0 0 10px">Package excludes</h3>
+              <table class="table" aria-label="Exclusions">
+                <tr><th>Not included</th><th>Notes</th></tr>
+                <tr><td>Airfare</td><td>Depends on departure city and season</td></tr>
+                <tr><td>Personal expenses</td><td>Snacks, souvenirs, personal needs</td></tr>
+                <tr><td>Optional upgrades</td><td>Private rooms, extra locations, extra boat time</td></tr>
+              </table>
+              <p style="margin:10px 0 0; color:var(--muted); font-size:12.8px; line-height:1.6">
+                We recommend preparing extra buffer money for weather-based schedule adjustments.
+              </p>
+            </div>
           </div>
-
-          <div class="badgeRow" aria-label="Tags">
-            <span class="badge">Campus trip</span>
-            <span class="badge">Graduation holiday</span>
-            <span class="badge">Organization retreat</span>
-          </div>
-
-          <p class="hint" style="margin-top:10px;">
-            WhatsApp number: +62 821 3630 5370
-          </p>
         </div>
-      </aside>
+
+        <div style="height:14px"></div>
+
+        <div class="grid-2">
+          <!-- Group scenarios with prices -->
+          <div class="panel">
+            <div class="pad">
+              <h3 style="margin:0 0 6px">Group package scenarios</h3>
+              <p style="margin:0 0 12px; color:var(--muted); font-size:12.8px; line-height:1.6">
+                Example estimates to help students imagine the budget range. Final offers adjust by season and availability.
+              </p>
+
+              <table class="table" aria-label="Group scenarios">
+                <tr>
+                  <th>Scenario</th>
+                  <th>Group size</th>
+                  <th>Estimated range</th>
+                  <th>Suitable for</th>
+                </tr>
+                <tr>
+                  <td><b>Compact trip</b></td>
+                  <td>8 to 10 pax</td>
+                  <td>IDR 6.350.000 to 6.950.000 / pax</td>
+                  <td>Small study group, project team, easier coordination</td>
+                </tr>
+                <tr>
+                  <td><b>Standard campus group</b></td>
+                  <td>12 to 16 pax</td>
+                  <td>IDR 5.750.000 to 6.350.000 / pax</td>
+                  <td>Class group or division with balanced cost-sharing</td>
+                </tr>
+                <tr>
+                  <td><b>Extended generation trip</b></td>
+                  <td>18 to 24 pax</td>
+                  <td>IDR 5.350.000 to 5.950.000 / pax</td>
+                  <td>Graduation trip, multi-class collaboration, more content time</td>
+                </tr>
+              </table>
+
+              <p style="margin:10px 0 0; color:var(--muted); font-size:12.5px">
+                Note: estimates exclude airfare.
+              </p>
+            </div>
+          </div>
+
+          <!-- Budget simulation per person -->
+          <div class="panel">
+            <div class="pad">
+              <h3 style="margin:0 0 6px">Budget simulation per person</h3>
+              <p style="margin:0 0 12px; color:var(--muted); font-size:12.8px; line-height:1.6">
+                A simple simulation to help students prepare cashflow.
+              </p>
+
+              <table class="table" aria-label="Budget simulation">
+                <tr>
+                  <th>Component</th>
+                  <th>Estimate (IDR)</th>
+                  <th>Notes</th>
+                </tr>
+                <tr>
+                  <td>Trip program (land and sea)</td>
+                  <td>5.350.000 to 6.950.000</td>
+                  <td>Depends on group scenario</td>
+                </tr>
+                <tr>
+                  <td>Airfare buffer</td>
+                  <td>1.800.000 to 3.500.000</td>
+                  <td>Seasonal, departure city dependent</td>
+                </tr>
+                <tr>
+                  <td>Meals and snacks</td>
+                  <td>350.000 to 650.000</td>
+                  <td>Depends on inclusions and personal style</td>
+                </tr>
+                <tr>
+                  <td>Personal expenses</td>
+                  <td>300.000 to 900.000</td>
+                  <td>Souvenirs, extra drinks, personal needs</td>
+                </tr>
+                <tr>
+                  <td><b>Total recommended prepare</b></td>
+                  <td><b>7.800.000 to 12.000.000</b></td>
+                  <td>Safe range for most student groups</td>
+                </tr>
+              </table>
+
+              <div style="margin-top:12px">
+                <a class="btn btn-primary" href="https://wa.me/6282136305370" target="_blank" rel="noopener">Ask for exact quotation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TERMS -->
+      <section id="terms" class="reveal">
+        <div class="section-head">
+          <div>
+            <h2>Terms and policies</h2>
+            <p>Short, clear, and presentation-friendly. You can adjust based on lecturer instructions.</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="pad">
+            <div class="accordion">
+              <details open>
+                <summary>Booking and payment policy <span class="sum-right">Important</span></summary>
+                <div class="content">
+                  A booking is confirmed after agreement on date, group size, and itinerary scope.
+                  Payment terms follow the final quotation and can include down payment for securing accommodation and boats.
+                </div>
+              </details>
+              <details>
+                <summary>Reschedule policy <span class="sum-right">Flexible</span></summary>
+                <div class="content">
+                  Reschedule is possible depending on availability. Sea and weather conditions can affect the itinerary.
+                  SAJ TRIP prioritizes safety and will propose the closest equivalent schedule when needed.
+                </div>
+              </details>
+              <details>
+                <summary>Participant responsibility <span class="sum-right">Safety</span></summary>
+                <div class="content">
+                  Participants must follow guide instructions during snorkeling and boat sessions.
+                  Bring personal medicine if needed. Keep respectful behavior during village visits.
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="reveal">
+        <div class="section-head">
+          <div>
+            <h2>FAQ</h2>
+            <p>Short answers so it stays clean on mobile.</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="pad">
+            <div class="accordion">
+              <details>
+                <summary>Can we depart from a different city? <span class="sum-right">Yes</span></summary>
+                <div class="content">Yes. Tell us your departure city and target month, we adjust route and budget.</div>
+              </details>
+              <details>
+                <summary>Is it suitable for first-timers? <span class="sum-right">Yes</span></summary>
+                <div class="content">Yes, the program pacing is designed for student groups with guided coordination.</div>
+              </details>
+              <details>
+                <summary>Do we need swimming skills? <span class="sum-right">Recommended</span></summary>
+                <div class="content">Basic comfort in water helps. We can arrange safety pacing and equipment planning.</div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="reveal">
+        <div class="foot container">
+          <div>
+            <b>SAJ TRIP</b><br/>
+            Nusantara Wonderland | Raja Ampat Open Trip
+            <div style="margin-top:8px; color:var(--muted)">WhatsApp: +62 821 3630 5370</div>
+          </div>
+          <div style="text-align:right">
+            <div style="color:var(--muted)">Made for GitHub Pages</div>
+            <div style="margin-top:6px; color:var(--muted)">Edit images in: <b>img/</b></div>
+          </div>
+        </div>
+      </footer>
     </div>
-
   </div>
-</main>
 
-<footer>
-  <div class="container">
-    <div class="foot">
-      <div>
-        <b>UNITour & Travel</b><br/>
-        <small>Student-friendly tropical Indonesia trips. Raja Ampat 5D4N open trip.</small>
-      </div>
-      <div>
-        <small>© <span id="year"></span> UNITour & Travel • Built for GitHub Pages</small>
-      </div>
-    </div>
+  <!-- Floating WhatsApp -->
+  <div class="wa-float" aria-label="WhatsApp quick action">
+    <small>Fast booking via WhatsApp</small>
+    <a href="https://wa.me/6282136305370" target="_blank" rel="noopener">
+      Book SAJ TRIP
+    </a>
   </div>
-</footer>
 
-<script>
-  // ========= WhatsApp =========
-  const WA_NUMBER = "6282136305370";
-  const waText = encodeURIComponent(
-    "Hi UNITour! I want to request a quote for Raja Ampat 5D4N.\n\n" +
-    "Name:\nCampus/Faculty:\nGroup size (8–10 / 12–16 / 18–24):\nTarget month:\nDeparture city:\nNotes (snorkeling/content/documentation letter):"
-  );
-  const waLink = `https://wa.me/${WA_NUMBER}?text=${waText}`;
-  ["waTop","waSide","waSticky"].forEach(id=>{
-    const el = document.getElementById(id);
-    if(el) el.href = waLink;
-  });
+  <script>
+    // Smooth reveal per section (scroll animation)
+    const items = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) e.target.classList.add('show');
+      });
+    }, { threshold: 0.12 });
 
-  // ========= Mobile menu =========
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-  if(menuBtn && mobileMenu){
-    menuBtn.addEventListener("click", ()=>{
-      const show = mobileMenu.style.display === "none";
-      mobileMenu.style.display = show ? "block" : "none";
-    });
-  }
-
-  // ========= Scroll reveal animation =========
-  const items = document.querySelectorAll(".reveal");
-  const obs = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.classList.add("in");
-        obs.unobserve(e.target);
-      }
-    });
-  }, {threshold: 0.14});
-  items.forEach(i=>obs.observe(i));
-
-  // ========= Budget simulation =========
-  function rupiah(n){
-    const x = Math.max(0, Number(n || 0));
-    return "IDR " + x.toLocaleString("id-ID");
-  }
-
-  // Base trip costs from table midpoints (you can edit)
-  const baseTrip = {
-    1: 6650000,
-    2: 6050000,
-    3: 5650000
-  };
-
-  function updateBudget(){
-    const airfare = Number(document.getElementById("airfare").value || 0);
-    const meals = Number(document.getElementById("meals").value || 0);
-    const pick = document.getElementById("scenarioPick").value;
-    const total = (baseTrip[pick] || 0) + airfare + meals;
-
-    document.getElementById("totalLive").textContent = rupiah(total);
-
-    // Update table totals too
-    const a1 = airfare, m1 = meals;
-    document.getElementById("a1").textContent = rupiah(a1);
-    document.getElementById("m1").textContent = rupiah(m1);
-    document.getElementById("s1").innerHTML = "<b>" + rupiah(baseTrip[1] + a1 + m1) + "</b>";
-
-    document.getElementById("a2").textContent = rupiah(a1);
-    document.getElementById("m2").textContent = rupiah(m1);
-    document.getElementById("s2").innerHTML = "<b>" + rupiah(baseTrip[2] + a1 + m1) + "</b>";
-
-    document.getElementById("a3").textContent = rupiah(a1);
-    document.getElementById("m3").textContent = rupiah(m1);
-    document.getElementById("s3").innerHTML = "<b>" + rupiah(baseTrip[3] + a1 + m1) + "</b>";
-  }
-
-  ["airfare","meals","scenarioPick"].forEach(id=>{
-    const el = document.getElementById(id);
-    if(el) el.addEventListener("input", updateBudget);
-  });
-  updateBudget();
-
-  // ========= Year =========
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    items.forEach(el => io.observe(el));
+  </script>
 </body>
-          </html>
+</html>
