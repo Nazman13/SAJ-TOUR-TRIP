@@ -425,7 +425,73 @@
     .budget-result span {
       color: #111827;
     }
+/* === ITINERARY INSERT STYLE (FIX) === */
+.section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:10px;
+}
 
+.section-head h2{
+  font-size:18px;
+  margin:0 0 4px;
+  color:#0f172a;
+}
+
+.section-head p{
+  margin:0;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.panel{
+  background:#fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  overflow:hidden;
+}
+
+.pad{ padding:18px 20px; }
+
+.itinerary-insert{ width:100%; }
+.it-title{
+  font-size:16px;
+  margin:0 0 10px;
+  color:#0f172a;
+}
+
+.it-block{
+  padding:12px 0;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.it-day{
+  font-weight:700;
+  font-size:14px;
+  color:#0f172a;
+  margin-bottom:6px;
+}
+
+.it-desc{
+  font-size:13px;
+  color:#374151;
+}
+
+.it-note{
+  margin-top:12px;
+  font-size:12.5px;
+  color:var(--muted);
+  padding:10px 12px;
+  border-radius:12px;
+  background:#f8fafc;
+  border:1px dashed #cbd5e1;
+}
+
+/* biar class "reveal" kamu tetap jalan pakai animasi yang sama */
+.reveal{ opacity:1; transform:none; }
     /* RESPONSIVE */
 
     @media (max-width: 900px) {
@@ -595,43 +661,66 @@
       </ul>
     </section>
 
-    <section id="itinerary" class="card">
-      <h2>Sample itinerary 5D4N</h2>
+    <section id="itinerary" class="reveal">
+  <div class="section-head">
+    <div>
+      <h2>Sample itinerary 5 Day 4 Night</h2>
+      <p>Clean and inserted layout, easy to read like a brochure card.</p>
+    </div>
+  </div>
 
-      <h3>Day 1 - Arrival and welcome session</h3>
-      <p>
-        Arrival at Sorong, boat transfer to Raja Ampat, check in at local homestay, welcome briefing, and free time to explore
-        the surrounding pier or beach. Evening is reserved for group introduction and rest.
-      </p>
+  <div class="panel">
+    <div class="pad">
+      <div class="itinerary-insert">
+        <h3 class="it-title">Sample itinerary 5D4N</h3>
 
-      <h3>Day 2 - Piaynemo viewpoint and lagoon</h3>
-      <p>
-        Boat trip to Piaynemo, short hike to the viewpoint, panorama and photo session, lagoon exploration, and snorkeling
-        in selected clear water spots. Return to homestay before sunset.
-      </p>
+        <div class="it-block">
+          <div class="it-day">Day 1 - Arrival and welcome session</div>
+          <div class="it-desc">
+            Arrival at Sorong, boat transfer to Raja Ampat, check in at local homestay, welcome briefing,
+            and free time to explore the surrounding pier or beach. Evening is reserved for group introduction and rest.
+          </div>
+        </div>
 
-      <h3>Day 3 - Snorkeling and sand bank experience</h3>
-      <p>
-        Full day dedicated to snorkeling at coral reef locations and enjoying a sand bank session for content ready group photos.
-        Free time in the evening to rest or share experiences with the group.
-      </p>
+        <div class="it-block">
+          <div class="it-day">Day 2 - Piaynemo viewpoint and lagoon</div>
+          <div class="it-desc">
+            Boat trip to Piaynemo, short hike to the viewpoint, panorama and photo session, lagoon exploration,
+            and snorkeling in selected clear water spots. Return to homestay before sunset.
+          </div>
+        </div>
 
-      <h3>Day 4 - Village visit and flexible time</h3>
-      <p>
-        Visit to a local village to see daily life and culture up close. The remaining time is flexible for light walks,
-        additional photography, or relaxing around the homestay.
-      </p>
+        <div class="it-block">
+          <div class="it-day">Day 3 - Snorkeling and sand bank experience</div>
+          <div class="it-desc">
+            Full day dedicated to snorkeling at coral reef locations and enjoying a sand bank session for content-ready
+            group photos. Free time in the evening to rest or share experiences with the group.
+          </div>
+        </div>
 
-      <h3>Day 5 - Check out and return flight</h3>
-      <p>
-        Check out from homestay, boat transfer back to Sorong, then flight to home city. Simple closing session
-        and group photo before departure.
-      </p>
+        <div class="it-block">
+          <div class="it-day">Day 4 - Village visit and flexible time</div>
+          <div class="it-desc">
+            Visit to a local village to see daily life and culture up close. The remaining time is flexible for light walks,
+            additional photography, or relaxing around the homestay.
+          </div>
+        </div>
 
-      <p class="muted" style="margin-top:6px;">
-        Itinerary can be adjusted by the local team according to weather, safety considerations, and flight schedules,
-        while keeping the main highlights of Raja Ampat.
-      </p>
+        <div class="it-block" style="margin-bottom:0">
+          <div class="it-day">Day 5 - Check out and return flight</div>
+          <div class="it-desc">
+            Check out from homestay, boat transfer back to Sorong, then flight to home city.
+            Simple closing session and group photo before departure.
+          </div>
+        </div>
+
+        <div class="it-note">
+          Itinerary can be adjusted by the local team according to weather, safety considerations, and flight schedules,
+          while keeping the main highlights of Raja Ampat.
+        </div>
+      </div>
+    </div>
+  </div>
     </section>
 
     <section id="price" class="card">
