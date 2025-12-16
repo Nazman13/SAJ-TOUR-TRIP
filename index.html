@@ -917,25 +917,32 @@
 
 
     <!-- BUDGET SIMULATOR (FORM) -->
-    <section class="card">
-      <h2>Budget simulator</h2>
-      <p class="muted">
+    <section class="card" id="budget-simulator">
+  <details class="it-accordion">
+    <summary>
+      Budget simulator
+      <span class="it-toggle">Tap to open</span>
+    </summary>
+
+    <div class="it-content">
+      <p class="muted" style="margin:0 0 12px;">
         Use this simple tool to estimate total package budget before you ask for a detailed quotation.
         Numbers are based on mid range prices from the scenarios above and exclude airfare.
       </p>
 
       <div class="budget-row">
-        <label for="budget-people">Group size</label>
+        <label for="budget-people"><strong>Group size</strong></label>
         <input type="number" id="budget-people" min="1" max="50" value="12">
       </div>
 
-      <div class="budget-row">
-        <label for="budget-scenario">Scenario type</label>
+      <div class="budget-row" style="margin-top:10px;">
+        <label for="budget-scenario"><strong>Scenario type</strong></label>
         <select id="budget-scenario">
           <option value="6650000">Compact trip (8–10 students)</option>
           <option value="6050000" selected>Standard campus group (12–16 students)</option>
           <option value="5650000">Extended generation trip (18–24 students)</option>
         </select>
+
         <p class="budget-hint">
           Values follow the group package scenarios and can be adjusted in class discussion.
         </p>
@@ -946,17 +953,18 @@
       </button>
 
       <div id="budget-result" class="budget-result">
-        <p>
+        <p style="margin:0 0 10px;">
           <strong>Estimated package cost (group):</strong><br>
           <span id="budget-total">–</span>
         </p>
-        <p>
+        <p style="margin:0;">
           <strong>Approximate cost per person:</strong><br>
           <span id="budget-perperson">–</span>
         </p>
       </div>
+    </div>
+  </details>
     </section>
-
   </aside>
 
 </main>
